@@ -26,3 +26,8 @@ We're working on the **admin builder**, which will allow you to define two files
 3. `vtex link`
 
 4. Navigate to `workspace--account.myvtex.com/admin/app/example`
+
+
+**Upcoming documentation:**
+
+ - [esboço tela](https://github.com/vtex-apps/badges/pull/1)
