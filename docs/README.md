@@ -31,3 +31,4 @@ We're working on the **admin builder**, which will allow you to define two files
 **Upcoming documentation:**
 
  - [esboço tela](https://github.com/vtex-apps/badges/pull/1)
+ - [Feature/regra ativação simplificada](https://github.com/vtex-apps/badges/pull/2)
