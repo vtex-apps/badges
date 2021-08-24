@@ -36,3 +36,4 @@ We're working on the **admin builder**, which will allow you to define two files
  - [Feature/masterdata v2](https://github.com/vtex-apps/badges/pull/4)
  - [Feature/intl texts](https://github.com/vtex-apps/badges/pull/5)
  - [Feature/store](https://github.com/vtex-apps/badges/pull/6)
+ - [Feature/edit admin](https://github.com/vtex-apps/badges/pull/7)
