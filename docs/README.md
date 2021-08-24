@@ -37,3 +37,4 @@ We're working on the **admin builder**, which will allow you to define two files
  - [Feature/intl texts](https://github.com/vtex-apps/badges/pull/5)
  - [Feature/store](https://github.com/vtex-apps/badges/pull/6)
  - [Feature/edit admin](https://github.com/vtex-apps/badges/pull/7)
+ - [Feature/specification](https://github.com/vtex-apps/badges/pull/8)
