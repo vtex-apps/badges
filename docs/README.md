@@ -39,3 +39,4 @@ We're working on the **admin builder**, which will allow you to define two files
  - [Feature/edit admin](https://github.com/vtex-apps/badges/pull/7)
  - [Feature/specification](https://github.com/vtex-apps/badges/pull/8)
  - [withModifiers](https://github.com/vtex-apps/badges/pull/9)
+ - [pagination](https://github.com/vtex-apps/badges/pull/10)
