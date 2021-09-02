@@ -2,13 +2,17 @@
   "name": "vtex.admin-example",
   "version": "1.6.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vtex-test-tools test"
   },
   "devDependencies": {
+    "@apollo/react-testing": "3",
     "@types/node": "^11.12.1",
     "@types/react": "^16.8.10",
     "@types/react-intl": "^2.3.17",
+    "@vtex/styleguide": "^9.145.1",
+    "@vtex/test-tools": "^3.4.2",
     "apollo-client": "^2.4.7",
+    "eslint-config-vtex-react": "^6.8.3",
     "graphql": "^14.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -16,18 +20,17 @@
     "react-intl": "^5.20.4",
     "typescript": "3.9.7",
     "vtex.condition-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@2.2.0/public/@types/vtex.condition-layout",
+    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.x/public/@types/vtex.css-handles",
     "vtex.file-manager-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.file-manager-graphql@0.3.0/public/@types/vtex.file-manager-graphql",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.130.0/public/@types/vtex.render-runtime",
     "vtex.rich-text": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.14.0/public/@types/vtex.rich-text",
     "vtex.store-image": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.12.0/public/@types/vtex.store-image",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide",
-    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.x/public/@types/vtex.css-handles",
-    "eslint-config-vtex-react": "^6.8.3"
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide"
   },
   "dependencies": {
     "@types/faker": "^4.1.5",
     "babel-plugin-react-intl": "^8.2.25",
     "faker": "^4.1.0",
-    "react-intl": "^5.20.7"
+    "react-intl": "3"
   }
 }
