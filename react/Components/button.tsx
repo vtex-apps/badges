@@ -19,18 +19,21 @@ const ButtonArea: FC = () => {
           <Button
             isActiveOfGroup={provider.button === 'image'}
             onClick={() => provider.setButton('image')}
+            testId="button-image"
           >
             {intl.formatMessage(button.image)}
           </Button>,
           <Button
             isActiveOfGroup={provider.button === 'text'}
             onClick={() => provider.setButton('text')}
+            testId="button-text"
           >
             {intl.formatMessage(button.text)}
           </Button>,
           <Button
             isActiveOfGroup={provider.button === 'html'}
             onClick={() => provider.setButton('html')}
+            testId="button-html"
           >
             {intl.formatMessage(button.html)}
           </Button>,
