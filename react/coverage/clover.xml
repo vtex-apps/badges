@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1630679904762" clover="3.2.0">
+  <project timestamp="1630679904762" name="All files">
+    <metrics statements="41" coveredstatements="37" conditionals="18" coveredconditionals="4" methods="29" coveredmethods="6" elements="88" coveredelements="47" complexity="0" loc="41" ncloc="41" packages="3" files="7" classes="7"/>
+    <package name="Components">
+      <metrics statements="19" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <file name="alert.tsx" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/Components/alert.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+      <file name="button.tsx" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/Components/button.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+      </file>
+      <file name="buttonSave.tsx" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/Components/buttonSave.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Context">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="20" coveredmethods="0"/>
+      <file name="context.tsx" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/Context/context.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="20" coveredmethods="0"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="20" coveredstatements="17" conditionals="14" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="buttonOptions.tsx" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/utils/buttonOptions.tsx">
+        <metrics statements="6" coveredstatements="3" conditionals="14" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="5"/>
+      </file>
+      <file name="definedMessages.ts" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/utils/definedMessages.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
+        <line num="85" count="3" type="stmt"/>
+        <line num="100" count="3" type="stmt"/>
+        <line num="109" count="3" type="stmt"/>
+      </file>
+      <file name="showAlertOptions.ts" path="/Users/anabaptistao/Documents/Badges e Frente de loja/badges/react/utils/showAlertOptions.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

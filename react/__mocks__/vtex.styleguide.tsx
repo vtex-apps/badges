@@ -1,3 +1,5 @@
 export { default as Alert } from '@vtex/styleguide/lib/Alert'
 export { default as ButtonGroup } from '@vtex/styleguide/lib/ButtonGroup'
 export { default as Button } from '@vtex/styleguide/lib/Button'
+export { default as Card } from '@vtex/styleguide/lib/Card'
+export { default as Conditions } from '@vtex/styleguide/lib/Conditions'
