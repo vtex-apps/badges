@@ -55,7 +55,7 @@ const values = {
   sizeOfAllBadgesIndexed: 0,
 }
 
-describe('Alert Area', () => {
+describe('Button Area', () => {
   it('should render title of Button Group', async () => {
     const { container } = render(
       <Context.Provider value={values}>

@@ -55,7 +55,7 @@ const values = {
   sizeOfAllBadgesIndexed: 0,
 }
 
-describe('Alert Area', () => {
+describe('Button Save Area', () => {
   it('should render the save button', async () => {
     render(
       <Context.Provider value={values}>
