@@ -14,7 +14,7 @@ const ButtonSaveArea: FC = () => {
   return (
     <div className="flex flex-column w-100" style={{ alignItems: 'flex-end' }}>
       <span className="mt5">
-        <Button onClick={provider.save}>
+        <Button onClick={provider.save} testId="button-save">
           {intl.formatMessage(buttonSave.save)}
         </Button>
       </span>
