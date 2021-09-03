@@ -69,7 +69,7 @@ describe('Alert Area', () => {
   })
 
   it('should test onClick button', async () => {
-    const mockFn = jest.fn()
+    const onClick = jest.fn()
     const { getByTestId } = render(
       <Context.Provider value={values}>
         <ButtonSaveArea />
@@ -78,10 +78,10 @@ describe('Alert Area', () => {
 
     const button = getByTestId('button-save')
 
-    button.onclick = mockFn
+    button.onclick = onClick
 
     fireEvent.click(button)
 
-    expect(mockFn).toHaveBeenCalled()
+    expect(onClick).toHaveBeenCalled()
   })
 })
