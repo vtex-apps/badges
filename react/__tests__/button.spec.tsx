@@ -1,4 +1,4 @@
-import { render, screen } from '@vtex/test-tools/react'
+import { fireEvent, render, screen } from '@vtex/test-tools/react'
 import React from 'react'
 
 import ButtonArea from '../Components/button'
@@ -78,6 +78,23 @@ describe('Alert Area', () => {
     expect(screenValue).toContainHTML('button')
   })
 
+  it('should click button when testdId = button-image', async () => {
+    const onClick = jest.fn()
+    const { getByTestId } = render(
+      <Context.Provider value={values}>
+        <ButtonArea />
+      </Context.Provider>
+    )
+
+    const button = getByTestId('button-image')
+
+    button.onclick = onClick
+
+    fireEvent.click(button)
+
+    expect(onClick).toHaveBeenCalled()
+  })
+
   it('should render button when testdId = button-text', async () => {
     render(
       <Context.Provider value={values}>
@@ -90,6 +107,23 @@ describe('Alert Area', () => {
     expect(screenValue).toContainHTML('button')
   })
 
+  it('should click button when testdId = button-text', async () => {
+    const onClick = jest.fn()
+    const { getByTestId } = render(
+      <Context.Provider value={values}>
+        <ButtonArea />
+      </Context.Provider>
+    )
+
+    const button = getByTestId('button-text')
+
+    button.onclick = onClick
+
+    fireEvent.click(button)
+
+    expect(onClick).toHaveBeenCalled()
+  })
+
   it('should render button when testdId = button-html', async () => {
     render(
       <Context.Provider value={values}>
@@ -100,5 +134,22 @@ describe('Alert Area', () => {
     const screenValue = await screen.findByTestId('button-html')
 
     expect(screenValue).toContainHTML('button')
+  })
+
+  it('should click button when testdId = button-html', async () => {
+    const onClick = jest.fn()
+    const { getByTestId } = render(
+      <Context.Provider value={values}>
+        <ButtonArea />
+      </Context.Provider>
+    )
+
+    const button = getByTestId('button-html')
+
+    button.onclick = onClick
+
+    fireEvent.click(button)
+
+    expect(onClick).toHaveBeenCalled()
   })
 })
