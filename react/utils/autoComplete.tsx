@@ -63,7 +63,7 @@ const AutoComplete: FC<Props> = ({
     if (values !== undefined) {
       return {
         onSelect: (e: { label: string; value: string }) => {
-          loading
+          // loading
           onChange({ id: e.value, name: 'null', value: 'null' })
         },
         value: !term.length
