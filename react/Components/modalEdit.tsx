@@ -42,6 +42,7 @@ const ModalEdit: FC = () => {
         <div className="nowrap">
           <span className="mr4">
             <Button
+              testId="button-modal-edit-close"
               variation="tertiary"
               onClick={(e: SyntheticEvent) => {
                 e.preventDefault
@@ -53,6 +54,7 @@ const ModalEdit: FC = () => {
           </span>
           <span>
             <Button
+              testId="button-modal-edit"
               variation="primary"
               onClick={(e: SyntheticEvent) => {
                 e.preventDefault
