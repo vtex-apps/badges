@@ -4,8 +4,7 @@ import React from 'react'
 
 interface Props {
   onChange: any
-  name: string
-  value: string
+  value: any
 }
 
 const GetSpecificationNameAndValue: FC<Props> = ({
@@ -19,6 +18,7 @@ const GetSpecificationNameAndValue: FC<Props> = ({
     <div className="flex">
       <div>
         <Input
+          testId="input-name"
           onChange={(e: { target: { value: string } }) =>
             onChange({
               ...value,
@@ -36,6 +36,7 @@ const GetSpecificationNameAndValue: FC<Props> = ({
 
       <div>
         <Input
+          testId="input-value"
           onChange={(e: { target: { value: string } }) =>
             onChange({
               ...value,
