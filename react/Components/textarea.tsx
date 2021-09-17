@@ -20,6 +20,7 @@ const HtmlArea: FC = () => {
             provider.setHtml(e.target.value)
           }}
           value={provider.html}
+          id="text-area"
         ></Textarea>
       </div>
     </>
