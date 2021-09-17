@@ -3,57 +3,8 @@ import React from 'react'
 
 import ButtonArea from '../Components/button'
 import Context from '../Context/context'
-import { ButtonOptions } from '../utils/buttonOptions'
-import { ShowAlertOptions } from '../utils/showAlertOptions'
-
-const values = {
-  button: ButtonOptions.image,
-  setButton: () => {},
-  name: '',
-  setName: () => {},
-  html: '',
-  setHtml: () => {},
-  chooseFile: () => {},
-  file: '',
-  text: '',
-  setText: () => {},
-  conditions: { simpleStatements: [], operator: '' },
-  setConditionsFunction: () => {},
-  handleToggleOperator: () => {},
-  textValidate: [],
-  showAlert: ShowAlertOptions.alertError,
-  handleCloseAlert: () => {},
-  nameProducts: [{ label: '', value: '' }],
-  nameSku: [{ label: '', value: '' }],
-  nameBrands: [{ label: '', value: '' }],
-  nameCollections: [{ label: '', value: '' }],
-  nameCategory: [{ label: '', value: '' }],
-  nameSpecification: [{ label: '', value: '' }],
-  setConditions: () => {},
-  validateIfAllFieldsIsComplete: () => false,
-  valuesSearchBadges: [],
-  listBadgesEdit: [],
-  deleteBadges: () => {},
-  modalDelete: false,
-  setModalDelete: () => {},
-  clickDelete: () => {},
-  editBadges: () => {},
-  clickEdit: () => {},
-  setModalEdit: () => {},
-  modalEdit: false,
-  showImage: false,
-  setShowImage: () => {},
-  clearValue: () => {},
-  save: () => {},
-  paginations: {
-    currentPage: 0,
-    currentItemFrom: 0,
-    currentItemTo: 0,
-    tableLength: 0,
-  },
-  setPaginationFunction: () => {},
-  sizeOfAllBadgesIndexed: 0,
-}
+// eslint-disable-next-line jest/no-mocks-import
+import { values } from '../__mocks__/values'
 
 describe('Button Area', () => {
   it('should render title of Button Group', async () => {
