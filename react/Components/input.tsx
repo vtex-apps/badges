@@ -17,16 +17,17 @@ const InputArea: FC<Props> = ({ name }: Props) => {
   const intl = useIntl()
 
   const updateValueName = (event: React.ChangeEvent<HTMLInputElement>) => {
-    provider.setName(event.target.value ?? '')
+    provider.setName(event.target.value)
   }
 
   const updateValueText = (event: React.ChangeEvent<HTMLInputElement>) => {
-    provider.setText(event.target.value ?? '')
+    provider.setText(event.target.value)
   }
 
   if (name === 'name') {
     return (
       <Input
+        testId="input-name"
         name={'name'}
         placeholder={intl.formatMessage(input.namePlaceholder)}
         size="large"
@@ -40,6 +41,7 @@ const InputArea: FC<Props> = ({ name }: Props) => {
   return (
     <div className="mt5">
       <Input
+        testId="input-text"
         name={'text'}
         placeholder={intl.formatMessage(input.textPlaceholder)}
         size="large"
