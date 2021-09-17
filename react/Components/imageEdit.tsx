@@ -18,6 +18,7 @@ const ImageEdit: FC = () => {
           <img src={provider.file.result} height="300"></img>
         </div>
         <Button
+          testId="button-show-image-true"
           onClick={(e: SyntheticEvent) => {
             e.preventDefault()
             provider.setShowImage(false)
@@ -57,6 +58,7 @@ const ImageEdit: FC = () => {
               e.preventDefault()
               provider.setShowImage(true)
             }}
+            testId="button-show-image-false"
           >
             {intl.formatMessage(commonModal.cancel)}
           </Button>
