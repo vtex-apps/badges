@@ -1,23 +1,13 @@
-import React, { useMemo } from 'react'
-import { useQuery } from 'react-apollo'
+import React from 'react'
 import { index as RichText } from 'vtex.rich-text'
 import { Image } from 'vtex.store-image'
-
-import searchMasterdata from '../queries/searchMasterdata.gql'
 
 export const conditionsPropsFunction = (
   props: any,
   handles: HandlesType,
-  withModifiers: any
+  withModifiers: any,
+  conditionsProps: any
 ) => {
-  const { data } = useQuery<BadgesData>(searchMasterdata)
-
-  const conditionsProps = useMemo(() => {
-    if (data !== undefined) return data?.searchMasterdata?.data
-
-    return []
-  }, [data])
-
   const conditionsMap = conditionsProps.map((element: BadgesDataValues) => {
     return conditionsPropsValues(element, props, handles, withModifiers)
   })
@@ -40,7 +30,7 @@ function conditionsPropsValues(
       const allClasses = `${handles.badgeContainer} ${classes}`
 
       return (
-        <span className={allClasses}>
+        <span className={allClasses} style={{ maxWidth: '50px' }}>
           {decisionBetweenTextImageHtml(data, props)}
         </span>
       )
