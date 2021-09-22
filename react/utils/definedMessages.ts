@@ -114,3 +114,8 @@ export const modalEdit = defineMessages({
     id: 'badges.modal.edit.change.image',
   },
 })
+
+export const specification = defineMessages({
+  inputName: { id: 'badges.specification.input.name' },
+  inputValue: { id: 'badges.specification.input.value' },
+})

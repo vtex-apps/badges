@@ -1,6 +1,9 @@
 import { Input } from 'vtex.styleguide'
 import type { FC } from 'react'
 import React from 'react'
+import { useIntl } from 'react-intl'
+
+import { specification } from './definedMessages'
 
 interface Props {
   onChange: any
@@ -14,6 +17,8 @@ const GetSpecificationNameAndValue: FC<Props> = ({
   value: any
   onChange: any
 }) => {
+  const intl = useIntl()
+
   return (
     <div className="flex">
       <div>
@@ -26,7 +31,7 @@ const GetSpecificationNameAndValue: FC<Props> = ({
               id: 'null',
             })
           }
-          placeholder="Nome da especificação"
+          placeholder={intl.formatMessage(specification.inputName)}
           type="string"
           value={value?.name || ''}
         />
@@ -44,7 +49,7 @@ const GetSpecificationNameAndValue: FC<Props> = ({
               id: 'null',
             })
           }
-          placeholder="Valor da especificação"
+          placeholder={intl.formatMessage(specification.inputValue)}
           type="string"
           value={value?.value || ''}
         />
