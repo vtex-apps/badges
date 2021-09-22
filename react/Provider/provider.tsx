@@ -306,7 +306,7 @@ const Provider: FC = props => {
       variables: { id: deleteId },
     })
 
-    if (returnDelete) {
+    if (returnDelete.data.deleteMasterdata) {
       showToast(intl.formatMessage(provider.sucessDelete))
       refetch()
       setDeleteId('')
@@ -436,7 +436,6 @@ const Provider: FC = props => {
         nameCategory,
         nameSpecification,
         setConditions,
-        validateIfAllFieldsIsComplete,
         valuesSearchBadges,
         listBadgesEdit,
         deleteBadges,
@@ -454,6 +453,9 @@ const Provider: FC = props => {
         paginations,
         setPaginationFunction,
         sizeOfAllBadgesIndexed,
+        deleteId,
+        setEditId,
+        editId,
       }}
     >
       {props.children}
