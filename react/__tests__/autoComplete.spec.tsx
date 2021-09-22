@@ -20,18 +20,4 @@ describe('AutComplete Area', () => {
 
     expect(container.firstChild).not.toBeNull()
   })
-
-  // it('should render the auto complete', async () => {
-  //   const onChange = jest.fn()
-  //   const value = { id: 'id' }
-  //   const name = 'brandId'
-
-  //   const { container } = render(
-  //     <Context.Provider value={values}>
-  //       <AutoComplete onChange={onChange()} name={name} value={value} />
-  //     </Context.Provider>
-  //   )
-
-  //   expect(onChange).toBeCalled()
-  // })
 })
