@@ -19,7 +19,7 @@ export const mocks = [
         pageSize: 5,
       },
     },
-    newData: jest.fn(() => ({
+    response: {
       data: {
         searchMasterdata: {
           data: [
@@ -62,7 +62,7 @@ export const mocks = [
           ],
         },
       },
-    })),
+    },
   },
 
   {
@@ -244,28 +244,286 @@ export const mocks = [
     request: {
       query: updateMasterdata,
       variables: {
-        idBadges: '64d9f6e4-01b3-11ec-82ac-1236248951d9',
-        saveValues: {
-          content: 'html',
+        id: '64d9f6e4-01b3-11ec-82ac-1236248951d9',
+        saveData: {
           name: 'name',
           operator: 'all',
-          type: 'html',
           simpleStatements: [
             {
-              object: {
-                name: '3',
-                value: '4',
-              },
+              object: { name: '3', value: '4' },
               subject: 'specificationProperties',
               verb: '=',
             },
           ],
+          content: 'html',
+          type: 'html',
         },
       },
     },
     result: {
       data: {
         updateMasterdata: true,
+      },
+    },
+  },
+]
+
+export const mocksWithNullReturn = [
+  {
+    request: {
+      query: getProductsName,
+    },
+    result: {
+      data: {
+        getProductsNames: [
+          {
+            id: '1',
+            name: 'Gourmand Inox com dupla chama e trempe com ferro fundido',
+          },
+          {
+            id: '2',
+            name: 'Cooktop 5 bocas com grades piatina e acendimento automático',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getSkusNames,
+    },
+    result: {
+      data: {
+        getSkuNames: [
+          {
+            id: '7',
+            name: 'Gourmand Inox com dupla chama e trempe com ferro fundido Gourmand Inox com duplachama e trempe com ferro fundido - 110v',
+          },
+          {
+            id: '1',
+            name: 'Gourmand Inox com dupla chama e trempe com ferro fundido Gourmand Inox com duplachama e trempe com ferro fundido - 220 v',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getCategoryName,
+    },
+    result: {
+      data: {
+        getCategoryName: [
+          {
+            id: '1',
+            name: 'Fogão',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getCollectionsNames,
+    },
+    result: {
+      data: {
+        getCollectionsNames: [
+          {
+            id: '137',
+            name: 'Coleção da Ana',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getSpecificationName,
+    },
+    result: {
+      data: {
+        getSpecificationName: [
+          {
+            name: 'Número de bocas',
+          },
+          {
+            name: 'Voltagem',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getBrandsNames,
+    },
+    result: {
+      data: {
+        getBrandsNames: [
+          {
+            id: '2000000',
+            name: 'Brastemp',
+          },
+          {
+            id: '2000001',
+            name: 'Dior',
+          },
+          {
+            id: '2000002',
+            name: 'Wrangler',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: getBrandsNames,
+    },
+    result: {
+      data: {
+        getBrandsNames: [
+          {
+            id: '2000000',
+            name: 'Brastemp',
+          },
+          {
+            id: '2000001',
+            name: 'Dior',
+          },
+          {
+            id: '2000002',
+            name: 'Wrangler',
+          },
+        ],
+      },
+    },
+  },
+  {
+    request: {
+      query: saveMasterdata,
+      variables: {
+        saveData: {
+          name: 'name',
+          operator: 'all',
+          simpleStatements: [
+            {
+              object: { name: '3', value: '4' },
+              subject: 'specificationProperties',
+              verb: '=',
+            },
+          ],
+          content: 'html',
+          type: 'html',
+        },
+      },
+    },
+    result: {
+      data: {
+        saveMasterdata: {
+          Id: null,
+        },
+      },
+    },
+  },
+
+  {
+    request: {
+      query: deleteMasterdata,
+      variables: {
+        id: '64d9f6e4-01b3-11ec-82ac-1236248951d9',
+      },
+    },
+    result: {
+      data: {
+        deleteMasterdata: false,
+      },
+    },
+  },
+  {
+    request: {
+      query: updateMasterdata,
+      variables: {
+        id: '64d9f6e4-01b3-11ec-82ac-1236248951d9',
+        saveData: {
+          name: 'name',
+          operator: 'all',
+          simpleStatements: [
+            {
+              object: { name: '3', value: '4' },
+              subject: 'specificationProperties',
+              verb: '=',
+            },
+          ],
+          content: 'html',
+          type: 'html',
+        },
+      },
+    },
+    result: {
+      data: {
+        updateMasterdata: false,
+      },
+    },
+  },
+  {
+    request: {
+      query: uploadFile,
+      variables: {
+        file: 'f',
+      },
+    },
+    result: {
+      data: {
+        uploadFile: {
+          fileUrl: 'url',
+        },
+      },
+    },
+  },
+]
+
+export const mocksSaveMasterdataWithImage = [
+  {
+    request: {
+      query: saveMasterdata,
+      variables: {
+        saveData: {
+          name: 'name',
+          operator: 'all',
+          simpleStatements: [
+            {
+              object: { name: '3', value: '4' },
+              subject: 'specificationProperties',
+              verb: '=',
+            },
+          ],
+          content: 'url',
+          type: 'image',
+        },
+      },
+    },
+    result: {
+      data: {
+        saveMasterdata: {
+          Id: null,
+        },
+      },
+    },
+  },
+  {
+    request: {
+      query: uploadFile,
+      variables: {
+        file: 'f',
+      },
+    },
+    result: {
+      data: {
+        uploadFile: {
+          fileUrl: 'url',
+        },
       },
     },
   },

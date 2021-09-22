@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import React, { createContext } from 'react'
 
 export { default as Alert } from '@vtex/styleguide/lib/Alert'
 export { default as ButtonGroup } from '@vtex/styleguide/lib/ButtonGroup'
@@ -14,12 +14,14 @@ export { default as Table } from '@vtex/styleguide/lib/Table'
 export { default as AutocompleteInput } from '@vtex/styleguide/lib/AutocompleteInput'
 export { default as Tabs } from '@vtex/styleguide/lib/Tabs'
 export { default as Tab } from '@vtex/styleguide/lib/Tab'
-export { default as ToastProvider } from '@vtex/styleguide/lib/ToastProvider'
 export { default as Layout } from '@vtex/styleguide/lib/Layout'
 export { default as PageBlock } from '@vtex/styleguide/lib/PageBlock'
-// export { default as ToastContext } from '@vtex/styleguide/lib/ToastProvider'
 
-// Deixar comentario
+// Não reconheceu o component
+export const ToastProvider = jest
+  .fn()
+  .mockImplementation(({ positioning, children }) => <div>{children}</div>)
+
 export const ToastContext = createContext({
   showToast: jest.fn(),
 })

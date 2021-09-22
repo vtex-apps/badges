@@ -92,4 +92,7 @@ export const values = {
   },
   setPaginationFunction: jest.fn(),
   sizeOfAllBadgesIndexed: 16,
+  deleteId: '',
+  setEditId: jest.fn(),
+  editId: '',
 }
