@@ -1,5 +1,4 @@
 import { fireEvent, render } from '@vtex/test-tools/react'
-import type { LabelHTMLAttributes } from 'react'
 import React from 'react'
 
 import GetSpecificationNameAndValue from '../utils/specificationValues'
@@ -35,22 +34,4 @@ describe('GetSpecificationNameAndValue Area', () => {
     expect(input.value).toBe('changeValue')
     expect(input.name).toBe('changeName')
   })
-
-  // it('should render the GetSpecificationNameAndValue area 3', async () => {
-  //   const onChange = jest.fn()
-  //   const value = { value: 'value', name: 'name' }
-
-  //   const { getByTestId } = render(
-  //     <GetSpecificationNameAndValue onChange={onChange()} value={value} />
-  //   )
-
-  //   const changeValue = { target: { value: 'changeValue' } }
-  //   const input = getByTestId('input-value').querySelector(
-  //     'input'
-  //   ) as HTMLInputElement
-
-  //   fireEvent.change(input, changeValue)
-
-  //   expect(input.value).toBe('changeValue')
-  // })
 })

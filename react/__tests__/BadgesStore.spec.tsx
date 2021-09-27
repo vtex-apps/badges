@@ -1,11 +1,9 @@
-import { MockedProvider, wait } from '@apollo/react-testing'
+import { wait } from '@apollo/react-testing'
 import { render } from '@vtex/test-tools/react'
 import React from 'react'
 import * as reactapollo from 'react-apollo'
 
 import BadgesStore from '../BadgesStore'
-// eslint-disable-next-line jest/no-mocks-import
-import { mocks } from '../__mocks__/mockUseQuery'
 
 describe('Badges Store Area', () => {
   it('should render the Badges Store area', async () => {

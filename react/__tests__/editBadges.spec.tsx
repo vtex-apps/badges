@@ -1,7 +1,6 @@
 import { fireEvent, render } from '@vtex/test-tools/react'
 import React from 'react'
 
-import ModalEdit from '../Components/modalEdit'
 import Context from '../Context/context'
 import EditBadges from '../EditBadges'
 // eslint-disable-next-line jest/no-mocks-import

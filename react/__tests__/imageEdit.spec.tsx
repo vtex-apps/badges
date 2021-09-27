@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@vtex/test-tools/react'
+import { fireEvent, render } from '@vtex/test-tools/react'
 import React from 'react'
 
 import ImageEdit from '../Components/imageEdit'

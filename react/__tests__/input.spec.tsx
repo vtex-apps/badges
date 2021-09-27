@@ -1,7 +1,6 @@
-import { fireEvent, render, screen } from '@vtex/test-tools/react'
+import { fireEvent, render } from '@vtex/test-tools/react'
 import React from 'react'
 
-import ButtonArea from '../Components/button'
 import InputArea from '../Components/input'
 import Context from '../Context/context'
 // eslint-disable-next-line jest/no-mocks-import
