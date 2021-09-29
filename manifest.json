@@ -1,7 +1,7 @@
 {
   "name": "badges",
   "vendor": "vtex",
-  "version": "1.6.0",
+  "version": "2.1.0",
   "title": "App Badges",
   "description": "",
   "mustUpdateAt": "2022-08-28",
@@ -14,7 +14,8 @@
     "vtex.rich-text": "0.x",
     "vtex.store-image": "0.x",
     "vtex.condition-layout": "2.x",
-    "vtex.css-handles": "1.x"
+    "vtex.css-handles": "1.x",
+    "vtex.product-context": "0.x"
   },
   "builders": {
     "react": "3.x",

@@ -1,9 +1,10 @@
 import React from 'react'
 import { index as RichText } from 'vtex.rich-text'
 import { Image } from 'vtex.store-image'
+import { useProduct } from 'vtex.product-context'
 
 export const conditionsPropsFunction = (
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any,
   conditionsProps: any
@@ -17,7 +18,7 @@ export const conditionsPropsFunction = (
 
 function conditionsPropsValues(
   data: BadgesDataValues,
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any
 ) {
@@ -40,7 +41,10 @@ function conditionsPropsValues(
   return values
 }
 
-function decisionBetweenTextImageHtml(data: BadgesDataValues, props: any) {
+function decisionBetweenTextImageHtml(
+  data: BadgesDataValues,
+  props: PropsStore
+) {
   if (data?.type === 'text') {
     return <RichText {...props.text} text={data?.content} />
   }
@@ -70,7 +74,7 @@ function conditionsFunction(
   }> = []
 
   data.forEach(element => {
-    if (element.object.id) {
+    if (element.object.id !== null && element.object.id !== 'null') {
       const rule = {
         subject: `${element.subject}`,
         arguments: {
@@ -95,4 +99,31 @@ function conditionsFunction(
   })
 
   return value
+}
+
+export function getWhere(props: PropsStore) {
+  if (props?.productQuery) {
+    const { product } = props?.productQuery
+    const { selectedItem } = useProduct()
+
+    let where =
+      `(simpleStatements.subject=brandId AND simpleStatements.object.id="${product.brandId}") OR ` +
+      `(simpleStatements.subject=categoryId AND simpleStatements.object.id="${product.categoryId}") OR ` +
+      `(simpleStatements.subject=selectedItemId AND simpleStatements.object.id="${selectedItem.itemId}") OR ` +
+      `(simpleStatements.subject=productId AND simpleStatements.object.id="${product.productId}") `
+
+    product.productClusters.forEach((element: { id: string }) => {
+      where += `OR (simpleStatements.subject=productClusters AND simpleStatements.object.id="${element.id}")`
+    })
+
+    product.properties.forEach(
+      (element: { name: string; values: string[] }) => {
+        where += `OR (simpleStatements.subject=specificationProperties AND simpleStatements.object.name="${element.name}" AND simpleStatements.object.value="${element.values[0]}") `
+      }
+    )
+
+    return where
+  }
+
+  return ''
 }
