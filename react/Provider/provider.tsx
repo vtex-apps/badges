@@ -392,6 +392,8 @@ const Provider: FC = props => {
       } else {
         showToast(intl.formatMessage(provider.errorEdit))
       }
+
+      clearValue()
     }
   }
 
