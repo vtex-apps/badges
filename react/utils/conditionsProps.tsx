@@ -7,7 +7,7 @@ import { useProduct } from 'vtex.product-context'
 import searchMasterdata from '../queries/searchMasterdata.gql'
 
 export const conditionsPropsFunction = (
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any
 ) => {
@@ -34,7 +34,7 @@ export const conditionsPropsFunction = (
 
 function conditionsPropsValues(
   data: BadgesDataValues,
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any
 ) {
@@ -57,7 +57,10 @@ function conditionsPropsValues(
   return values
 }
 
-function decisionBetweenTextImageHtml(data: BadgesDataValues, props: any) {
+function decisionBetweenTextImageHtml(
+  data: BadgesDataValues,
+  props: PropsStore
+) {
   if (data?.type === 'text') {
     return <RichText {...props.text} text={data?.content} />
   }
@@ -114,7 +117,7 @@ function conditionsFunction(
   return value
 }
 
-function getWhere(props: any) {
+function getWhere(props: PropsStore) {
   if (props?.productQuery) {
     const { product } = props?.productQuery
     const { selectedItem } = useProduct()
