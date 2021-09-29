@@ -2,32 +2,21 @@ import React, { useMemo } from 'react'
 import { useQuery } from 'react-apollo'
 import { index as RichText } from 'vtex.rich-text'
 import { Image } from 'vtex.store-image'
+import { useProduct } from 'vtex.product-context'
 
 import searchMasterdata from '../queries/searchMasterdata.gql'
 
 export const conditionsPropsFunction = (
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any
 ) => {
-  const { product } = props.productQuery
+  const where = getWhere(props)
 
-  let where =
-    `(simpleStatements.subject=brandId AND simpleStatements.object.id=${product.brandId}) OR ` +
-    `(simpleStatements.subject=categoryId AND simpleStatements.object.id=${product.categoryId}) OR ` +
-    `(simpleStatements.subject=selectedItemId AND simpleStatements.object.id=${props.query.skuId}) OR ` +
-    `(simpleStatements.subject=productId AND simpleStatements.object.id=${product.productId}) `
-
-  product.productClusters.forEach((element: { id: string }) => {
-    where += `OR (simpleStatements.subject=productClusters AND simpleStatements.object.id=${element.id}) `
-  })
-
-  product.properties.forEach((element: { name: string; values: string[] }) => {
-    where += `OR (simpleStatements.subject=specificationProperties AND simpleStatements.object.name=${element.name} AND simpleStatements.object.value=${element.values[0]}) `
-  })
+  const pageSize = props.numberOfBadges ? props.numberOfBadges : '0'
 
   const { data } = useQuery<BadgesData>(searchMasterdata, {
-    variables: { where },
+    variables: { where, pageSize },
   })
 
   const conditionsProps = useMemo(() => {
@@ -45,7 +34,7 @@ export const conditionsPropsFunction = (
 
 function conditionsPropsValues(
   data: BadgesDataValues,
-  props: any,
+  props: PropsStore,
   handles: HandlesType,
   withModifiers: any
 ) {
@@ -68,7 +57,10 @@ function conditionsPropsValues(
   return values
 }
 
-function decisionBetweenTextImageHtml(data: BadgesDataValues, props: any) {
+function decisionBetweenTextImageHtml(
+  data: BadgesDataValues,
+  props: PropsStore
+) {
   if (data?.type === 'text') {
     return <RichText {...props.text} text={data?.content} />
   }
@@ -123,4 +115,31 @@ function conditionsFunction(
   })
 
   return value
+}
+
+function getWhere(props: PropsStore) {
+  if (props?.productQuery) {
+    const { product } = props?.productQuery
+    const { selectedItem } = useProduct()
+
+    let where =
+      `(simpleStatements.subject=brandId AND simpleStatements.object.id="${product.brandId}") OR ` +
+      `(simpleStatements.subject=categoryId AND simpleStatements.object.id="${product.categoryId}") OR ` +
+      `(simpleStatements.subject=selectedItemId AND simpleStatements.object.id="${selectedItem.itemId}") OR ` +
+      `(simpleStatements.subject=productId AND simpleStatements.object.id="${product.productId}") `
+
+    product.productClusters.forEach((element: { id: string }) => {
+      where += `OR (simpleStatements.subject=productClusters AND simpleStatements.object.id="${element.id}")`
+    })
+
+    product.properties.forEach(
+      (element: { name: string; values: string[] }) => {
+        where += `OR (simpleStatements.subject=specificationProperties AND simpleStatements.object.name="${element.name}" AND simpleStatements.object.value="${element.values[0]}") `
+      }
+    )
+
+    return where
+  }
+
+  return ''
 }

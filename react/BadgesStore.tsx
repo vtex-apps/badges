@@ -6,7 +6,7 @@ import { conditionsPropsFunction } from './utils/conditionsProps'
 
 const CSS_HANDLES = ['allBadgesContainer', 'badgeContainer', 'badges'] as const
 
-const BadgesStore: StorefrontFunctionComponent = (props: any) => {
+const BadgesStore: StorefrontFunctionComponent = (props: PropsStore) => {
   const { handles, withModifiers } = useCssHandles(CSS_HANDLES)
 
   const conditionsPropsValues = conditionsPropsFunction(

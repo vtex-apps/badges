@@ -389,6 +389,7 @@ const Provider: FC = props => {
         showToast(intl.formatMessage(provider.sucessEdit))
         setModalEdit(false)
         setEditId('')
+        clearValue()
       } else {
         showToast(intl.formatMessage(provider.errorEdit))
       }
