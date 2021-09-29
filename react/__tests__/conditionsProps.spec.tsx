@@ -1,8 +1,9 @@
-import { conditionsPropsFunction } from '../utils/conditionsProps'
+import { conditionsPropsFunction, getWhere } from '../utils/conditionsProps'
 
 describe('Conditions Props', () => {
   it('should test function conditionsPropsFunction with type = text', async () => {
     const props = {
+      numberOfBadges: 1,
       page: 'store.product',
       productQuery: {
         loading: false,
@@ -189,6 +190,7 @@ describe('Conditions Props', () => {
 
   it('should test function conditionsPropsFunction with type = html', async () => {
     const props = {
+      numberOfBadges: 1,
       page: 'store.product',
       productQuery: {
         loading: false,
@@ -374,6 +376,7 @@ describe('Conditions Props', () => {
 
   it('should test function conditionsPropsFunction with type = image', async () => {
     const props = {
+      numberOfBadges: 1,
       page: 'store.product',
       productQuery: {
         loading: false,
@@ -566,5 +569,159 @@ describe('Conditions Props', () => {
     const returnThenString = JSON.stringify(returnThen)
 
     expect(returnThenString.includes('span')).toBeTruthy()
+  })
+
+  it('should test function getWhere', async () => {
+    const props = {
+      numberOfBadges: 1,
+      page: 'store.product',
+      productQuery: {
+        loading: false,
+        product: {
+          cacheId: 'perfume-dior-1',
+          productId: '4',
+          description: '',
+          productName: "Perfume Dior J'Adore Eau de Parfum",
+          productReference: 'dior50',
+          linkText: 'perfume-dior-1',
+          brand: 'Dior',
+          brandId: 2000001,
+          link: 'https://portal.vtexcommercestable.com.br/perfume-dior-1/p',
+          categories: ['/Fashion/Perfume/', '/Fashion/'],
+          categoryId: '6',
+          priceRange: {
+            sellingPrice: {
+              highPrice: 115,
+              lowPrice: 99,
+              __typename: 'PriceRange',
+            },
+            listPrice: {
+              highPrice: 115,
+              lowPrice: 99,
+              __typename: 'PriceRange',
+            },
+            __typename: 'ProductPriceRange',
+          },
+          specificationGroups: [
+            {
+              name: 'Características',
+              originalName: 'Características',
+              specifications: [
+                {
+                  name: 'Gênero',
+                  originalName: 'Gênero',
+                  values: ['Mulher'],
+                  __typename: 'SpecificationGroupProperty',
+                },
+                {
+                  name: 'Aromas',
+                  originalName: 'Aromas',
+                  values: ['Jasmim'],
+                  __typename: 'SpecificationGroupProperty',
+                },
+              ],
+              __typename: 'SpecificationGroup',
+            },
+            {
+              name: 'allSpecifications',
+              originalName: 'allSpecifications',
+              specifications: [
+                {
+                  name: 'Gênero',
+                  originalName: 'Gênero',
+                  values: ['Mulher'],
+                  __typename: 'SpecificationGroupProperty',
+                },
+                {
+                  name: 'Aromas',
+                  originalName: 'Aromas',
+                  values: ['Jasmim'],
+                  __typename: 'SpecificationGroupProperty',
+                },
+              ],
+              __typename: 'SpecificationGroup',
+            },
+          ],
+          skuSpecifications: [
+            {
+              field: {
+                name: 'Capacidade',
+                originalName: 'Capacidade',
+                __typename: 'SKUSpecificationField',
+              },
+              values: [
+                {
+                  name: '30ml',
+                  originalName: '30ml',
+                  __typename: 'SKUSpecificationValue',
+                },
+                {
+                  name: '50ml',
+                  originalName: '50ml',
+                  __typename: 'SKUSpecificationValue',
+                },
+                {
+                  name: '100ml',
+                  originalName: '100ml',
+                  __typename: 'SKUSpecificationValue',
+                },
+              ],
+              __typename: 'SkuSpecification',
+            },
+          ],
+          productClusters: [
+            {
+              id: '137',
+              name: 'Coleção da Ana',
+              __typename: 'ProductClusters',
+            },
+          ],
+          clusterHighlights: [],
+          properties: [
+            {
+              name: 'Gênero',
+              values: ['Mulher'],
+              __typename: 'Property',
+            },
+            {
+              name: 'Aromas',
+              values: ['Jasmim'],
+              __typename: 'Property',
+            },
+          ],
+          __typename: 'Product',
+          titleTag: "Página do Perfume Dior J'Adore Eau de Parfum",
+        },
+      },
+      slug: 'perfume-dior-1',
+      text: {
+        font: 't-heading-5',
+        textColor: 'blue',
+        textAlignment: 'CENTER',
+        textPosition: 'CENTER',
+        htmlId: 'teste1',
+      },
+      image: {
+        blockClass: 'container',
+        height: 500,
+        width: 500,
+        minWidth: 100,
+        minHeight: 100,
+        alt: 'teste',
+        title: 'title',
+        preload: true,
+      },
+      params: {
+        id: '4',
+        slug: 'perfume-dior-1',
+      },
+      query: {},
+    }
+
+    const returnValue = getWhere(props)
+
+    const returnThenString = JSON.stringify(returnValue)
+
+    expect(returnThenString.includes('2000001')).toBeTruthy()
   })
 })
