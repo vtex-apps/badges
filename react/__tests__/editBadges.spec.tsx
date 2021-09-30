@@ -57,7 +57,7 @@ describe('Edit Badges Area', () => {
     expect(container.firstChild).not.toBeNull()
   })
 
-  it('should change how much values apeers on edit table', async () => {
+  it('should change how much values apeears on edit table', async () => {
     const { container, getAllByText } = render(
       <Context.Provider value={{ ...values }}>
         <EditBadges />

@@ -8,7 +8,7 @@ import { ShowAlertOptions } from '../utils/showAlertOptions'
 import { values } from '../__mocks__/values'
 
 describe('Alert Area', () => {
-  it('should render sucess Alert if showAlert = 0', async () => {
+  it('should render success Alert if showAlert = 0', async () => {
     const showAlert = { showAlert: ShowAlertOptions.notShow }
 
     const { container } = render(
@@ -20,7 +20,7 @@ describe('Alert Area', () => {
     expect(container.firstChild).toBeNull()
   })
 
-  it('should render sucess Alert if showAlert = 1', async () => {
+  it('should render success Alert if showAlert = 1', async () => {
     const showAlert = { showAlert: ShowAlertOptions.alertSave }
 
     const { container } = render(

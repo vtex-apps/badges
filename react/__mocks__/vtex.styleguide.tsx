@@ -17,7 +17,7 @@ export { default as Tab } from '@vtex/styleguide/lib/Tab'
 export { default as Layout } from '@vtex/styleguide/lib/Layout'
 export { default as PageBlock } from '@vtex/styleguide/lib/PageBlock'
 
-// Não reconheceu o component
+// Did not recognize the component
 export const ToastProvider = jest
   .fn()
   .mockImplementation(({ positioning, children }) => <div>{children}</div>)

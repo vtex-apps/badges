@@ -298,7 +298,7 @@ describe('Provider', () => {
     expect(showAlertValue).toBe('1')
   })
 
-  it('should test function save and saving with no a valid return', async () => {
+  it('should test function save and saving with no valid return', async () => {
     jest.mock('react-apollo')
     jest
       .spyOn(reactapollo, 'useLazyQuery')

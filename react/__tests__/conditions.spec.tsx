@@ -7,7 +7,7 @@ import Context from '../Context/context'
 import { values } from '../__mocks__/values'
 
 describe('Conditions Area', () => {
-  it('should render sucess Alert if showAlert = 0', async () => {
+  it('should render success Alert if showAlert = 0', async () => {
     const conditions = { conditions: { simpleStatements: [], operator: 'all' } }
 
     const { container } = render(

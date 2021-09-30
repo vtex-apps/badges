@@ -42,7 +42,7 @@ describe('Input Area', () => {
 
     const changeValue = { target: { value: 'changeValueInput' } }
 
-    // O retorno do getbytestid era uma label com input dentro, a label não possui estado de onChange
+    // The return of getbytestid was a label with input inside, the label has no onChange state
     const input = getByTestId('input-name').querySelector('input')
 
     fireEvent.change(input as HTMLInputElement, changeValue)

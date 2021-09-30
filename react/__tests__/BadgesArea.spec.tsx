@@ -46,7 +46,7 @@ describe('Badges Area', () => {
 
     button.onclick = onClick()
 
-    fireEvent.click(returnValue[1])
+    fireEvent.click(button)
 
     expect(onClick).toHaveBeenCalled()
   })
