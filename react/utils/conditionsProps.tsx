@@ -1,30 +1,14 @@
-import React, { useMemo } from 'react'
-import { useQuery } from 'react-apollo'
+import React from 'react'
 import { index as RichText } from 'vtex.rich-text'
 import { Image } from 'vtex.store-image'
 import { useProduct } from 'vtex.product-context'
 
-import searchMasterdata from '../queries/searchMasterdata.gql'
-
 export const conditionsPropsFunction = (
   props: PropsStore,
   handles: HandlesType,
-  withModifiers: any
+  withModifiers: any,
+  conditionsProps: any
 ) => {
-  const where = getWhere(props)
-
-  const pageSize = props.numberOfBadges ? props.numberOfBadges : '0'
-
-  const { data } = useQuery<BadgesData>(searchMasterdata, {
-    variables: { where, pageSize },
-  })
-
-  const conditionsProps = useMemo(() => {
-    if (data !== undefined) return data?.searchMasterdata?.data
-
-    return []
-  }, [data])
-
   const conditionsMap = conditionsProps.map((element: BadgesDataValues) => {
     return conditionsPropsValues(element, props, handles, withModifiers)
   })
@@ -47,7 +31,7 @@ function conditionsPropsValues(
       const allClasses = `${handles.badgeContainer} ${classes}`
 
       return (
-        <span className={allClasses}>
+        <span className={allClasses} style={{ maxWidth: '50px' }}>
           {decisionBetweenTextImageHtml(data, props)}
         </span>
       )
@@ -117,7 +101,7 @@ function conditionsFunction(
   return value
 }
 
-function getWhere(props: PropsStore) {
+export function getWhere(props: PropsStore) {
   if (props?.productQuery) {
     const { product } = props?.productQuery
     const { selectedItem } = useProduct()

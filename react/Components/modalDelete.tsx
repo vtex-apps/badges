@@ -24,6 +24,7 @@ const ModalDelete: FC = () => {
         <div className="nowrap">
           <span className="mr4">
             <Button
+              testId="button-modal-close"
               variation="tertiary"
               onClick={(e: SyntheticEvent) => {
                 e.preventDefault()
@@ -35,6 +36,7 @@ const ModalDelete: FC = () => {
           </span>
           <span>
             <Button
+              testId="button-modal-delete"
               variation="primary"
               onClick={(e: SyntheticEvent) => {
                 e.preventDefault()

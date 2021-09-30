@@ -17,7 +17,7 @@ interface ProductQueryProps {
 }
 
 interface ProductProps {
-  brandId: string
+  brandId: number
   categoryId: string
   productId: string
   productClusters: ClusterProps[]

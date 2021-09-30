@@ -56,5 +56,7 @@
   "badges.provider.sucess.edit": "Badge editada com sucesso",
   "badges.provider.error.edit": "Erro ao editar badge",
   "badges.provider.sucess.delete": "Badge removida com sucesso",
-  "badges.provider.error.delete": "Erro ao remover badge"
+  "badges.provider.error.delete": "Erro ao remover badge",
+  "badges.specification.input.name": "Nome da especificação",
+  "badges.specification.input.value": "Valor da especificação"
 }

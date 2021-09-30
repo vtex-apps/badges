@@ -36,7 +36,6 @@ interface ContextType {
     simpleStatements: any
     operator: string
   }) => void
-  validateIfAllFieldsIsComplete: () => boolean
   valuesSearchBadges: BadgesDataValues[]
   listBadgesEdit: Array<{
     id: string
@@ -59,6 +58,9 @@ interface ContextType {
   paginations: Pagination
   setPaginationFunction: (pagination: any) => void
   sizeOfAllBadgesIndexed: number
+  deleteId: string | undefined
+  setEditId: (id: string) => void
+  editId: string | undefined
 }
 const Context = React.createContext<ContextType>({
   button: 'image',
@@ -84,7 +86,6 @@ const Context = React.createContext<ContextType>({
   nameCategory: [{ label: '', value: '' }],
   nameSpecification: [{ label: '', value: '' }],
   setConditions: () => {},
-  validateIfAllFieldsIsComplete: () => false,
   valuesSearchBadges: [],
   listBadgesEdit: [],
   deleteBadges: () => {},
@@ -107,6 +108,9 @@ const Context = React.createContext<ContextType>({
   },
   setPaginationFunction: () => {},
   sizeOfAllBadgesIndexed: 0,
+  deleteId: '',
+  setEditId: () => {},
+  editId: '',
 })
 
 export default Context
