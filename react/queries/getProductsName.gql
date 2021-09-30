@@ -1,0 +1,6 @@
+query getProductsNames {
+  getProductsNames {
+    id
+    name
+  }
+}

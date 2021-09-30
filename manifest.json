@@ -1,20 +1,64 @@
 {
-  "name": "admin-example",
+  "name": "badges",
   "vendor": "vtex",
-  "version": "0.0.2",
-  "title": "Example Admin App",
+  "version": "2.1.0",
+  "title": "App Badges",
   "description": "",
   "mustUpdateAt": "2022-08-28",
   "scripts": {
     "postreleasy": "vtex publish"
   },
   "dependencies": {
-    "vtex.styleguide": "9.x"
+    "vtex.styleguide": "9.x",
+    "vtex.file-manager-graphql": "0.x",
+    "vtex.rich-text": "0.x",
+    "vtex.store-image": "0.x",
+    "vtex.condition-layout": "2.x",
+    "vtex.css-handles": "1.x",
+    "vtex.product-context": "0.x"
   },
   "builders": {
     "react": "3.x",
     "admin": "0.x",
     "messages": "1.x",
-    "docs": "0.x"
-  }
+    "docs": "0.x",
+    "masterdata": "1.x",
+    "node": "6.x",
+    "graphql": "1.x",
+    "store": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{workspace}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    }
+  ]
 }
