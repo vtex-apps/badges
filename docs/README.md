@@ -36,7 +36,7 @@ Clicando no aplicativo, deverá visualizar a seguinte página:
 Nessa página é possível criar uma nova badge
 
 - Adicionando o nome da badges
-- Adicionando o conteÃºdo da badge (como imagem, texto ou html)
+- Adicionando o conteúdo da badge (como imagem, texto ou html)
 - Adicionando uma regra de ativação
 
 Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo
