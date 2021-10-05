@@ -14,6 +14,7 @@ import { commonModal, modalEdit } from '../utils/definedMessages'
 import ImageEdit from './imageEdit'
 import Context from '../Context/context'
 import { ButtonOptions } from '../utils/buttonOptions'
+import PriorityArea from './priority'
 
 const ModalEdit: FC = () => {
   const provider = useContext(Context)
@@ -73,6 +74,7 @@ const ModalEdit: FC = () => {
     >
       <DividerArea />
       <InputArea name={'name'} />
+      <PriorityArea />
       <ButtonArea />
       {getContent(provider.button)}
       <ConditionsArea />

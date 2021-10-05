@@ -34,6 +34,7 @@ const Provider: FC = props => {
   const [html, setHtml] = useState('')
   const [file, setFile] = useState({ files: null, result: null })
   const [text, setText] = useState('')
+  const [priority, setPriority] = useState(PriorityOptions.one)
   const [conditions, setConditions] = useState({
     simpleStatements: [],
     operator: 'all',
@@ -159,11 +160,12 @@ const Provider: FC = props => {
     return []
   }, [data])
 
-  useMemo(() => {
+  useMemo(async () => {
     searchMasterdataLazy({
       variables: {
         page: paginations.currentPage,
         pageSize: paginations.tableLength,
+        where: '',
       },
     })
   }, [paginations])
@@ -175,6 +177,7 @@ const Provider: FC = props => {
           id: element.id,
           name: element.name,
           type: element.type,
+          priority: element.priority,
           index: indexOf,
         }
       }
@@ -230,6 +233,10 @@ const Provider: FC = props => {
       validation.push(intl.formatMessage(provider.errorName))
     }
 
+    if (priority < 0 || priority > 5) {
+      validation.push(intl.formatMessage(provider.errorPriority))
+    }
+
     const selectedOption = buttonOptions[button]
 
     const validationResult = selectedOption.validate(selectedOption.value)
@@ -259,6 +266,7 @@ const Provider: FC = props => {
       valueSave.name = name
       valueSave.operator = conditions.operator
       valueSave.simpleStatements = conditions.simpleStatements
+      valueSave.priority = priority
 
       const selectedOption = buttonOptions[button]
 
@@ -339,6 +347,7 @@ const Provider: FC = props => {
     }
 
     setName(valuesSearchBadges[index].name)
+    setPriority(valuesSearchBadges[index].priority)
     if (valuesSearchBadges[index].type === ButtonOptions.html) {
       setHtml(valuesSearchBadges[index].content)
       setButton(ButtonOptions.html)
@@ -366,6 +375,7 @@ const Provider: FC = props => {
       valueSave.name = name
       valueSave.operator = conditions.operator
       valueSave.simpleStatements = conditions.simpleStatements
+      valueSave.priority = priority
 
       const selectedOption = buttonOptions[button]
 
@@ -457,6 +467,8 @@ const Provider: FC = props => {
         deleteId,
         setEditId,
         editId,
+        priority,
+        setPriority,
       }}
     >
       {props.children}

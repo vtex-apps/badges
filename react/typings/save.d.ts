@@ -8,4 +8,5 @@ interface SaveValues {
     object: { id: string; name: string; value: string }
   }>
   operator?: string
+  priority?: number
 }

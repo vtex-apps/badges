@@ -13,8 +13,16 @@ export async function searchMasterdata(
 ) {
   return ctx.clients.badges.searchRaw(
     { page, pageSize },
-    ['id', 'name', 'content', 'operator', 'simpleStatements', 'type'],
-    undefined,
+    [
+      'id',
+      'name',
+      'content',
+      'operator',
+      'simpleStatements',
+      'type',
+      'priority',
+    ],
+    'priority ASC',
     where
   )
 }

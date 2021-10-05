@@ -19,6 +19,9 @@ const EditBadges: FC = () => {
       type: {
         title: intl.formatMessage(edit.style),
       },
+      priority: {
+        title: intl.formatMessage(edit.priority),
+      },
     },
   }
 
