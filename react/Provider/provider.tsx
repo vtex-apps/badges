@@ -25,6 +25,7 @@ import {
   ButtonOptions,
 } from '../utils/buttonOptions'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
+import { PriorityOptions } from '../utils/priorityOptions'
 
 const Provider: FC = props => {
   const intl = useIntl()
@@ -49,9 +50,10 @@ const Provider: FC = props => {
 
   const [sizeOfAllBadgesIndexed, setSizeOfAllBadgesIndexed] = useState(0)
   const [showAlert, setShowAlert] = useState(ShowAlertOptions.notShow)
-  const [textValidate, setTextValidate] = useState<string[]>([''])
+  const [textValidate, setTextValidate] = useState([''])
   const [modalDelete, setModalDelete] = useState(false)
   const [modalEdit, setModalEdit] = useState(false)
+  const [modalError, setModalError] = useState(false)
   const [showImage, setShowImage] = useState(false)
 
   const [deleteId, setDeleteId] = useState<string>()
@@ -76,7 +78,7 @@ const Provider: FC = props => {
 
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataProductsNames.getProductsNames.forEach(
+    dataProductsNames?.getProductsNames?.forEach(
       (element: { name: string; id: string }) => {
         namesAndIds.push({ label: element.name, value: element.id })
       }
@@ -89,7 +91,7 @@ const Provider: FC = props => {
     if (dataSkuNames === undefined) return
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataSkuNames.getSkuNames.forEach(
+    dataSkuNames?.getSkuNames?.forEach(
       (element: { name: string; id: string }) => {
         namesAndIds.push({ label: element.name, value: element.id })
       }
@@ -102,7 +104,7 @@ const Provider: FC = props => {
     if (dataBrandsNames === undefined) return
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataBrandsNames.getBrandsNames.forEach(
+    dataBrandsNames?.getBrandsNames?.forEach(
       (element: { name: string; id: string }) => {
         namesAndIds.push({ label: element.name, value: element.id })
       }
@@ -115,7 +117,7 @@ const Provider: FC = props => {
     if (dataCollectionsNames === undefined) return
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataCollectionsNames.getCollectionsNames.forEach(
+    dataCollectionsNames?.getCollectionsNames?.forEach(
       (element: { name: string; id: string }) => {
         namesAndIds.push({ label: element.name, value: element.id })
       }
@@ -128,7 +130,7 @@ const Provider: FC = props => {
     if (dataCategoryNames === undefined) return
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataCategoryNames.getCategoryName.forEach(
+    dataCategoryNames?.getCategoryName?.forEach(
       (element: { name: string; id: string }) => {
         namesAndIds.push({ label: element.name, value: element.id })
       }
@@ -141,7 +143,7 @@ const Provider: FC = props => {
     if (dataSpecificationNames === undefined) return
     const namesAndIds: Array<{ label: string; value: string }> = []
 
-    dataSpecificationNames.getSpecificationName.forEach(
+    dataSpecificationNames?.getSpecificationName?.forEach(
       (element: { name: string }) => {
         namesAndIds.push({ label: element.name, value: element.name })
       }
@@ -324,6 +326,7 @@ const Provider: FC = props => {
   }
 
   async function clickEdit(index: number, id: string) {
+    setTextValidate([''])
     setModalEdit(true)
     setShowAlert(ShowAlertOptions.notShow)
 
@@ -469,6 +472,8 @@ const Provider: FC = props => {
         editId,
         priority,
         setPriority,
+        modalError,
+        setModalError,
       }}
     >
       {props.children}
