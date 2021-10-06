@@ -28,9 +28,9 @@ const AddBages: FC = () => {
     <>
       <DividerArea />
       <InputArea name={'name'} />
-      <PriorityArea />
       <ButtonArea />
       {getContent(provider.button)}
+      <PriorityArea />
       <ConditionsArea />
       <ValidationArea />
       <ButtonSaveArea />

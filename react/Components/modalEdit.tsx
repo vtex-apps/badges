@@ -74,9 +74,9 @@ const ModalEdit: FC = () => {
     >
       <DividerArea />
       <InputArea name={'name'} />
-      <PriorityArea />
       <ButtonArea />
       {getContent(provider.button)}
+      <PriorityArea />
       <ConditionsArea />
       <ValidationArea />
       <AlertArea />
