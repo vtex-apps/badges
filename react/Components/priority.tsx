@@ -37,28 +37,28 @@ const PriorityArea: FC = () => {
           <Button
             isActiveOfGroup={provider.priority === PriorityOptions.two}
             onClick={() => provider.setPriority(PriorityOptions.two)}
-            testId="button-text"
+            testId="button-two"
           >
             {intl.formatMessage(priority.two)}
           </Button>,
           <Button
             isActiveOfGroup={provider.priority === PriorityOptions.three}
             onClick={() => provider.setPriority(PriorityOptions.three)}
-            testId="button-html"
+            testId="button-three"
           >
             {intl.formatMessage(priority.three)}
           </Button>,
           <Button
             isActiveOfGroup={provider.priority === PriorityOptions.four}
             onClick={() => provider.setPriority(PriorityOptions.four)}
-            testId="button-html"
+            testId="button-four"
           >
             {intl.formatMessage(priority.four)}
           </Button>,
           <Button
             isActiveOfGroup={provider.priority === PriorityOptions.five}
             onClick={() => provider.setPriority(PriorityOptions.five)}
-            testId="button-html"
+            testId="button-five"
           >
             {intl.formatMessage(priority.five)}
           </Button>,
