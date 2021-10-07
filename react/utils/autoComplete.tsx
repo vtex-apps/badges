@@ -1,16 +1,25 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import type { FC } from 'react'
 import React, { useEffect, useMemo, useRef, useState, useContext } from 'react'
 import { useIntl } from 'react-intl'
-import { AutocompleteInput, Input } from 'vtex.styleguide'
+import { AutocompleteInput } from 'vtex.styleguide'
 
 import { autocomplete } from './definedMessages'
 import Context from '../Context/context'
 import ModalError from '../Components/modalError'
 
 interface Props {
-  onChange: any
+  onChange: ({
+    id,
+    name,
+    value,
+  }: {
+    id: string
+    name: string
+    value: string
+  }) => void
   name: string
-  value: any
+  value: { id: string }
   label: string
 }
 
@@ -30,9 +39,17 @@ const AutoComplete: FC<Props> = ({
   value,
   label,
 }: {
-  onChange: any
+  onChange: ({
+    id,
+    name,
+    value,
+  }: {
+    id: string
+    name: string
+    value: string
+  }) => void
   name: string
-  value: any
+  value: { id: string }
   label: string
 }) => {
   const intl = useIntl()
@@ -62,17 +79,19 @@ const AutoComplete: FC<Props> = ({
 
   const values = useMemo(() => fields[name], [fields, name])
 
-  useMemo(() => {
-    if (values === undefined) {
+  useEffect(() => {
+    if (values !== undefined) {
       provider.setModalError(true)
     }
   }, [values])
 
-  const nameValue = !values
-    ? ''
-    : values?.filter((element: any) =>
-        element.value === value?.id ? element : ''
-      )
+  const nameValue = useMemo(() => {
+    return !values
+      ? ''
+      : values?.filter((element: any) =>
+          element.value === value?.id ? element : ''
+        )
+  }, [values])
 
   const options = useMemo(() => {
     if (values !== undefined && values !== '') {
@@ -116,11 +135,7 @@ const AutoComplete: FC<Props> = ({
   }
 
   if (values !== undefined) {
-    return (
-      <>
-        <AutocompleteInput input={input} options={options} />
-      </>
-    )
+    return <AutocompleteInput input={input} options={options} />
   }
 
   return <ModalError label={label} />

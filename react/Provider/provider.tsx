@@ -25,7 +25,7 @@ import {
   ButtonOptions,
 } from '../utils/buttonOptions'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
-import { PriorityOptions } from '../utils/priorityOptions'
+import { PriorityOptions } from '../typings/priorityOptions'
 
 const Provider: FC = props => {
   const intl = useIntl()

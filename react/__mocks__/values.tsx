@@ -1,5 +1,5 @@
 import { ButtonOptions } from '../utils/buttonOptions'
-import { PriorityOptions } from '../utils/priorityOptions'
+import { PriorityOptions } from '../typings/priorityOptions'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
 
 export const values = {

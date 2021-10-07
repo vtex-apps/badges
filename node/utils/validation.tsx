@@ -12,7 +12,7 @@ export function validation(
 
   if (priority <= 0 || priority > 5) {
     throw new Error(
-      'It is necessary to send a priority with value betwheen 1 and 5'
+      'It is necessary to send a priority with value between 1 and 5'
     )
   }
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { Input } from 'vtex.styleguide'
 import type { FC } from 'react'
 import React from 'react'
@@ -6,7 +7,15 @@ import { useIntl } from 'react-intl'
 import { specification } from './definedMessages'
 
 interface Props {
-  onChange: any
+  onChange: ({
+    id,
+    name,
+    value,
+  }: {
+    id: string
+    name: string
+    value: string
+  }) => void
   value: any
 }
 
@@ -15,7 +24,15 @@ const GetSpecificationNameAndValue: FC<Props> = ({
   onChange,
 }: {
   value: any
-  onChange: any
+  onChange: ({
+    id,
+    name,
+    value,
+  }: {
+    id: string
+    name: string
+    value: string
+  }) => void
 }) => {
   const intl = useIntl()
 

@@ -3,7 +3,7 @@ import React from 'react'
 
 import PriorityArea from '../Components/priority'
 import Context from '../Context/context'
-import { PriorityOptions } from '../utils/priorityOptions'
+import { PriorityOptions } from '../typings/priorityOptions'
 // eslint-disable-next-line jest/no-mocks-import
 import { values } from '../__mocks__/values'
 
