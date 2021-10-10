@@ -7,6 +7,7 @@
   "badges.button.text": "Texto",
   "badges.button.html": "HTML",
   "badges.button.save": "Salvar",
+  "badges.button.description": "Para utilizar o botão HTML, ative-o em 'App Badges' nos 'Meus aplicativo'",
   "badges.conditions.rule": "Regras de ativação",
   "badges.conditions.select.rule": "Selecione a regra",
   "badges.conditions.header.prefix": "Corresponder a",

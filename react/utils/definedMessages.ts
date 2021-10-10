@@ -10,6 +10,7 @@ export const button = defineMessages({
   image: { id: 'badges.button.image' },
   text: { id: 'badges.button.text' },
   html: { id: 'badges.button.html' },
+  description: { id: 'badges.button.description' },
 })
 
 export const buttonSave = defineMessages({

@@ -65,6 +65,7 @@ interface ContextType {
   setPriority: (priority: number) => void
   modalError: boolean
   setModalError: (modalError: boolean) => void
+  buttonHtml: boolean
 }
 const Context = React.createContext<ContextType>({
   button: 'image',
@@ -119,6 +120,7 @@ const Context = React.createContext<ContextType>({
   setPriority: () => {},
   modalError: false,
   setModalError: () => {},
+  buttonHtml: false,
 })
 
 export default Context
