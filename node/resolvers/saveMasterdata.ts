@@ -1,3 +1,4 @@
+import { sendMessageSplunk } from '../utils/sendMessageSplunk'
 import { validation } from '../utils/validation'
 
 export async function saveMasterdata(
@@ -6,6 +7,8 @@ export async function saveMasterdata(
   ctx: Context
 ) {
   validation(saveValues.saveData, false)
+
+  sendMessageSplunk(saveValues.saveData.type, saveValues.saveData.content, ctx)
 
   return ctx.clients.badges.save({
     content: saveValues.saveData.content,

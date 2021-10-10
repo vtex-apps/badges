@@ -1,3 +1,4 @@
+import { sendMessageSplunk } from '../utils/sendMessageSplunk'
 import { validation } from '../utils/validation'
 
 export async function updateMasterdata(
@@ -6,6 +7,8 @@ export async function updateMasterdata(
   ctx: Context
 ) {
   validation(saveValues, true, idBadges)
+
+  sendMessageSplunk(saveValues.type, saveValues.content, ctx)
 
   return ctx.clients.badges
     .update(idBadges, {
