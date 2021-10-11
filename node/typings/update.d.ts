@@ -4,4 +4,5 @@ interface UpdateValues {
   name: string
   simpleStatements: []
   operator: string
+  priority: number
 }

@@ -1,4 +1,5 @@
 import { ButtonOptions } from '../utils/buttonOptions'
+import { PriorityOptions } from '../typings/priorityOptions'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
 
 export const values = {
@@ -18,7 +19,7 @@ export const values = {
   textValidate: [],
   showAlert: ShowAlertOptions.alertError,
   handleCloseAlert: jest.fn(),
-  nameProducts: [{ label: 'product', value: 'valueProduct' }],
+  nameProducts: undefined,
   nameSku: [{ label: 'sku', value: 'valueSku' }],
   nameBrands: [{ label: 'brand', value: 'valueBrand' }],
   nameCollections: [{ label: '', value: '' }],
@@ -95,4 +96,8 @@ export const values = {
   deleteId: '',
   setEditId: jest.fn(),
   editId: '',
+  priority: PriorityOptions.one,
+  setPriority: jest.fn(),
+  modalError: true,
+  setModalError: jest.fn(),
 }

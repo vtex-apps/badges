@@ -3,6 +3,7 @@ query searchMasterdata($page: Int, $pageSize: Int, $where: String) {
     data {
       id
       type
+      priority
       content
       name
       operator

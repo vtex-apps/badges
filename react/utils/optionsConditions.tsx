@@ -15,12 +15,24 @@ export function optionsFunctions() {
         {
           label: intl.formatMessage(options.is),
           value: '=',
-          object: (props: any) => <AutoComplete {...props} name="categoryId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="categoryId"
+              label={intl.formatMessage(options.category)}
+            />
+          ),
         },
         {
           label: intl.formatMessage(options.isNot),
           value: '!=',
-          object: (props: any) => <AutoComplete {...props} name="categoryId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="categoryId"
+              label={intl.formatMessage(options.category)}
+            />
+          ),
         },
       ],
     },
@@ -30,12 +42,24 @@ export function optionsFunctions() {
         {
           label: intl.formatMessage(options.is),
           value: '=',
-          object: (props: any) => <AutoComplete {...props} name="brandId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="brandId"
+              label={intl.formatMessage(options.brand)}
+            />
+          ),
         },
         {
           label: intl.formatMessage(options.isNot),
           value: '!=',
-          object: (props: any) => <AutoComplete {...props} name="brandId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="brandId"
+              label={intl.formatMessage(options.brand)}
+            />
+          ),
         },
       ],
     },
@@ -45,12 +69,24 @@ export function optionsFunctions() {
         {
           label: intl.formatMessage(options.is),
           value: '=',
-          object: (props: any) => <AutoComplete {...props} name="productId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="productId"
+              label={intl.formatMessage(options.product)}
+            />
+          ),
         },
         {
           label: intl.formatMessage(options.isNot),
           value: '!=',
-          object: (props: any) => <AutoComplete {...props} name="productId" />,
+          object: (props: any) => (
+            <AutoComplete
+              {...props}
+              name="productId"
+              label={intl.formatMessage(options.product)}
+            />
+          ),
         },
       ],
     },
@@ -61,14 +97,22 @@ export function optionsFunctions() {
           label: intl.formatMessage(options.is),
           value: '=',
           object: (props: any) => (
-            <AutoComplete {...props} name="productClusters" />
+            <AutoComplete
+              {...props}
+              name="productClusters"
+              label={intl.formatMessage(options.collection)}
+            />
           ),
         },
         {
           label: intl.formatMessage(options.isNot),
           value: '!=',
           object: (props: any) => (
-            <AutoComplete {...props} name="productClusters" />
+            <AutoComplete
+              {...props}
+              name="productClusters"
+              lable={intl.formatMessage(options.collection)}
+            />
           ),
         },
       ],
@@ -95,14 +139,22 @@ export function optionsFunctions() {
           label: intl.formatMessage(options.is),
           value: '=',
           object: (props: any) => (
-            <AutoComplete {...props} name="selectedItemId" />
+            <AutoComplete
+              {...props}
+              name="selectedItemId"
+              label={intl.formatMessage(options.sku)}
+            />
           ),
         },
         {
           label: intl.formatMessage(options.isNot),
           value: '!=',
           object: (props: any) => (
-            <AutoComplete {...props} name="selectedItemId" />
+            <AutoComplete
+              {...props}
+              name="selectedItemId"
+              label={intl.formatMessage(options.sku)}
+            />
           ),
         },
       ],

@@ -61,6 +61,10 @@ interface ContextType {
   deleteId: string | undefined
   setEditId: (id: string) => void
   editId: string | undefined
+  priority: number
+  setPriority: (priority: number) => void
+  modalError: boolean
+  setModalError: (modalError: boolean) => void
 }
 const Context = React.createContext<ContextType>({
   button: 'image',
@@ -111,6 +115,10 @@ const Context = React.createContext<ContextType>({
   deleteId: '',
   setEditId: () => {},
   editId: '',
+  priority: 0,
+  setPriority: () => {},
+  modalError: false,
+  setModalError: () => {},
 })
 
 export default Context

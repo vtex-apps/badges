@@ -8,6 +8,7 @@ import ConditionsArea from '../Components/conditions'
 import DividerArea from '../Components/divider'
 import ImageArea from '../Components/file'
 import InputArea from '../Components/input'
+import PriorityArea from '../Components/priority'
 import HtmlArea from '../Components/textarea'
 import ValidationArea from '../Components/validations'
 import Context from '../Context/context'
@@ -29,6 +30,7 @@ const AddBages: FC = () => {
       <InputArea name={'name'} />
       <ButtonArea />
       {getContent(provider.button)}
+      <PriorityArea />
       <ConditionsArea />
       <ValidationArea />
       <ButtonSaveArea />

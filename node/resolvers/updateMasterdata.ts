@@ -14,6 +14,7 @@ export async function updateMasterdata(
       operator: saveValues.operator,
       simpleStatements: saveValues.simpleStatements,
       type: saveValues.type,
+      priority: saveValues.priority,
     })
     .then(() => true)
     .catch((e: any) => {

@@ -14,7 +14,7 @@ describe('Button Area', () => {
       </Context.Provider>
     )
 
-    expect(container.firstChild).toHaveTextContent('Tipo do Badge')
+    expect(container.firstChild).not.toBeNull()
   })
 
   it('should render button when testdId = button-image', async () => {

@@ -51,6 +51,7 @@ export const edit = defineMessages({
   style: { id: 'badges.edit.style' },
   textShowRows: { id: 'badges.edit.text.show.rows' },
   textOf: { id: 'badges.edit.text.of' },
+  priority: { id: 'badges.edit.priority' },
 })
 
 export const provider = defineMessages({
@@ -63,6 +64,7 @@ export const provider = defineMessages({
   errorEdit: { id: 'badges.provider.error.edit' },
   sucessDelete: { id: 'badges.provider.sucess.delete' },
   errorDelete: { id: 'badges.provider.error.delete' },
+  errorPriority: { id: 'badges.provider.error.priority' },
 })
 
 export const options = defineMessages({
@@ -95,6 +97,9 @@ export const commonModal = defineMessages({
   edit: {
     id: 'badges.modal.edit',
   },
+  ok: {
+    id: 'badges.modal.ok',
+  },
 })
 
 export const modalDelete = defineMessages({
@@ -118,4 +123,24 @@ export const modalEdit = defineMessages({
 export const specification = defineMessages({
   inputName: { id: 'badges.specification.input.name' },
   inputValue: { id: 'badges.specification.input.value' },
+})
+
+export const priority = defineMessages({
+  title: { id: 'badges.priority.title' },
+  description: { id: 'badges.priority.description' },
+  one: { id: 'badges.priority.one' },
+  two: { id: 'badges.priority.two' },
+  three: { id: 'badges.priority.three' },
+  four: { id: 'badges.priority.four' },
+  five: { id: 'badges.priority.five' },
+})
+
+export const autocomplete = defineMessages({
+  placeholder: { id: 'badges.autocomplete.placeholder' },
+  text: { id: 'badges.autocomplete.text' },
+})
+
+export const modalError = defineMessages({
+  textError: { id: 'badges.modal.error.text' },
+  text: { id: 'badges.modal.error.text2' },
 })

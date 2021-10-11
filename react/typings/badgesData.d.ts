@@ -12,6 +12,7 @@ interface BadgesDataValues {
     verb: string
   }>
   operator: string
+  priority: number
   id: string
 }
 

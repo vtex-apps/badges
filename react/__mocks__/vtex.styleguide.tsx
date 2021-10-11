@@ -16,6 +16,8 @@ export { default as Tabs } from '@vtex/styleguide/lib/Tabs'
 export { default as Tab } from '@vtex/styleguide/lib/Tab'
 export { default as Layout } from '@vtex/styleguide/lib/Layout'
 export { default as PageBlock } from '@vtex/styleguide/lib/PageBlock'
+export { default as IconInfo } from '@vtex/styleguide/lib/icon/Info'
+export { default as Tooltip } from '@vtex/styleguide/lib/Tooltip'
 
 // Did not recognize the component
 export const ToastProvider = jest
