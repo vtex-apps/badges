@@ -6,6 +6,12 @@ README.md
 react/**/__tests__/**
 react/**/__mocks__/**
 react/**/__snapshots__/**
+node/**/__tests__/**
+node/**/__mocks__/**
+node/**/__snapshots__/**
 react/**/*.test.js
 react/**/*.test.ts
 react/**/*.test.tsx
+node/**/*.test.js
+node/**/*.test.ts
+node/**/*.test.tsx
