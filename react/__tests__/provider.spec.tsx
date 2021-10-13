@@ -751,7 +751,7 @@ describe('Provider', () => {
         setButton,
         setConditions,
         setName,
-        setHtml,
+        setText,
         editId,
       } = React.useContext(Context)
 
@@ -774,10 +774,10 @@ describe('Provider', () => {
             }
           ></button>
           <button data-testid="buttonName" onClick={() => setName('name')} />
-          <button data-testid="buttonHtml" onClick={() => setHtml('html')} />
+          <button data-testid="buttonText" onClick={() => setText('text')} />
           <button
             data-testid="buttonButton"
-            onClick={() => setButton(ButtonOptions.html)}
+            onClick={() => setButton(ButtonOptions.text)}
           />
           <button
             data-testid="buttonConditions"
@@ -811,7 +811,7 @@ describe('Provider', () => {
     )
 
     fireEvent.click(getByTestId('buttonName'))
-    fireEvent.click(getByTestId('buttonHtml'))
+    fireEvent.click(getByTestId('buttonText'))
     fireEvent.click(getByTestId('buttonButton'))
     fireEvent.click(getByTestId('buttonConditions'))
 
