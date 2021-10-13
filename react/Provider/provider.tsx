@@ -18,15 +18,10 @@ import deleteMasterdata from '../queries/deleteMasterdata.gql'
 import updateMasterdata from '../queries/updateMasterdata.gql'
 import settingsSchema from '../queries/settingsSchema.gql'
 import Context from '../Context/context'
-import { provider } from '../utils/definedMessages'
-import {
-  htmlButtonOption,
-  imageButtonOption,
-  textButtonOption,
-  ButtonOptions,
-} from '../utils/buttonOptions'
+import { provider, buttonOptionsMessages } from '../utils/definedMessages'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
-import { PriorityOptions } from '../typings/priorityOptions'
+import { ButtonOptions } from '../utils/buttonOptions'
+import { PriorityOptions } from '../utils/priorityOptions'
 
 const Provider: FC = props => {
   const intl = useIntl()
@@ -75,6 +70,32 @@ const Provider: FC = props => {
   const { data: dataCategoryNames } = useQuery(getCategoryName)
   const { data: dataSpecificationNames } = useQuery(getSpecificationName)
   const { data: dataSettingsSchema } = useQuery(settingsSchema)
+
+  const imageButtonOption: ButtonOption = {
+    type: 'image',
+    validate: (content?: any) =>
+      content === null || content === undefined
+        ? intl.formatMessage(buttonOptionsMessages.errorImage)
+        : '',
+  }
+
+  const textButtonOption: ButtonOption = {
+    type: 'text',
+    validate: (content?: string) =>
+      content === null || content === undefined || content === ''
+        ? intl.formatMessage(buttonOptionsMessages.errorText)
+        : '',
+  }
+
+  const htmlButtonOption: ButtonOption = {
+    type: 'html',
+    validate: (content?: string) =>
+      content === null || content === undefined || content === ''
+        ? intl.formatMessage(buttonOptionsMessages.errorHtml)
+        : content.includes('<script')
+        ? intl.formatMessage(buttonOptionsMessages.errorScript)
+        : '',
+  }
 
   const nameProducts = useMemo(() => {
     if (dataProductsNames === undefined) return

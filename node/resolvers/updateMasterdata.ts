@@ -6,9 +6,9 @@ export async function updateMasterdata(
   { idBadges, saveValues }: { idBadges: string; saveValues: UpdateValues },
   ctx: Context
 ) {
-  validation(saveValues, true, idBadges)
-
   sendMessageSplunk(saveValues.type, saveValues.content, ctx)
+
+  validation(saveValues, true, idBadges)
 
   return ctx.clients.badges
     .update(idBadges, {
