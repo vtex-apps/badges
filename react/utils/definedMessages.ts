@@ -145,3 +145,10 @@ export const modalError = defineMessages({
   textError: { id: 'badges.modal.error.text' },
   text: { id: 'badges.modal.error.text2' },
 })
+
+export const buttonOptionsMessages = defineMessages({
+  errorImage: { id: 'badges.button.option.error.image' },
+  errorText: { id: 'badges.button.option.error.text' },
+  errorHtml: { id: 'badges.button.option.error.html' },
+  errorScript: { id: 'badges.button.option.error.script' },
+})

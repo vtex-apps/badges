@@ -5,7 +5,7 @@ import { ButtonGroup, Button, Tooltip, IconInfo } from 'vtex.styleguide'
 
 import Context from '../Context/context'
 import { priority } from '../utils/definedMessages'
-import { PriorityOptions } from '../typings/priorityOptions'
+import { PriorityOptions } from '../utils/priorityOptions'
 
 const PriorityArea: FC = () => {
   const provider = useContext(Context)
