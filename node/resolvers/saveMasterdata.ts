@@ -6,9 +6,9 @@ export async function saveMasterdata(
   saveValues: SaveValues,
   ctx: Context
 ) {
-  validation(saveValues.saveData, false)
-
   sendMessageSplunk(saveValues.saveData.type, saveValues.saveData.content, ctx)
+
+  validation(saveValues.saveData, false)
 
   return ctx.clients.badges.save({
     content: saveValues.saveData.content,
