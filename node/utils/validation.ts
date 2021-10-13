@@ -23,7 +23,7 @@ export function validation(
   }
 
   if (operator.length === 0) {
-    throw new Error('It is necessary to send a operator')
+    throw new Error('It is necessary to send an operator')
   }
 
   if (simpleStatements.length === 0) {
@@ -36,7 +36,7 @@ export function validation(
 
   if (edit) {
     if (!idBadges) {
-      throw new Error('It is necessary to send a ID')
+      throw new Error('It is necessary to send an ID')
     }
   }
 }

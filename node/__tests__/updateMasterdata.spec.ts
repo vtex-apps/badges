@@ -2,7 +2,7 @@
 import { updateMasterdata } from '../resolvers/updateMasterdata'
 
 describe('Test updateMasterdata', () => {
-  it('Test if updateMasterdata is been called', async () => {
+  it('Test if updateMasterdata has been called', async () => {
     // @ts-ignore
     const ctx = {
       clients: {
@@ -53,7 +53,7 @@ describe('Test updateMasterdata', () => {
     )
   })
 
-  it('Test if updateMasterdata is been called witha false return', async () => {
+  it('Test if updateMasterdata has been called witha false return', async () => {
     // @ts-ignore
     const ctx = {
       clients: {

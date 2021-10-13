@@ -2,7 +2,7 @@
 import { searchMasterdata } from '../resolvers/searchMasterdata'
 
 describe('Test searchMasterdata', () => {
-  it('Test if searchMasterdata is been called', async () => {
+  it('Test if searchMasterdata has been called', async () => {
     const returnValue = {
       type: 'text',
       content: 'Aroma',
@@ -55,7 +55,7 @@ describe('Test searchMasterdata', () => {
     expect(returnSearch).toBe(returnValue)
   })
 
-  it('Test if searchMasterdata is been called with params = undefined', async () => {
+  it('Test if searchMasterdata has been called with params = undefined', async () => {
     const returnValue = {
       type: 'text',
       content: 'Aroma',

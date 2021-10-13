@@ -109,7 +109,7 @@ describe('Test valdiation', () => {
 
     expect(() => {
       validation(validationValues, false)
-    }).toThrow('It is necessary to send a operator')
+    }).toThrow('It is necessary to send an operator')
   })
 
   it('Test if validation have been called with priority = 0', async () => {
@@ -159,6 +159,32 @@ describe('Test valdiation', () => {
 
     expect(() => {
       validation(validationValues, true, idBadges)
-    }).toThrow('It is necessary to send a ID')
+    }).toThrow('It is necessary to send an ID')
+  })
+
+  it('Test if validation have been called with content = "<script></script>"', async () => {
+    const validationValues = {
+      type: 'html',
+      content: '<script></script>',
+      name: 'Aromas',
+      simpleStatements: [
+        {
+          object: {
+            name: '3',
+            value: '4',
+          },
+          subject: 'specificationProperties',
+          verb: '=',
+        },
+      ] as unknown as [],
+      operator: 'all',
+      priority: 1,
+    }
+
+    const idBadges = ''
+
+    expect(() => {
+      validation(validationValues, true, idBadges)
+    }).toThrow('Scripts not allowed to add')
   })
 })

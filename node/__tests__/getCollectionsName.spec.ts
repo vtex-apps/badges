@@ -14,7 +14,7 @@ describe('Test getCollectionsNames', () => {
     },
   } as Context
 
-  it('Test if getCollectionsNames is been called 1 time', () => {
+  it('Test if getCollectionsNames has been called once', () => {
     getCollectionsNames('', '', ctx)
     expect(ctx.clients.products.getCollectionsNames).toBeCalledTimes(1)
   })

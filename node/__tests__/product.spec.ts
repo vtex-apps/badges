@@ -19,13 +19,13 @@ describe('Products Client', () => {
     })
 
     const returnValue = await ProductsClient.getProductsId(
-      MOCKED_CONTEXT.workspace
+      MOCKED_CONTEXT.account
     )
 
     expect(returnValue.toString()).toBe('1')
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
     )
   })
 
@@ -56,7 +56,7 @@ describe('Products Client', () => {
     })
 
     const returnValue = await ProductsClient.getProductsName(
-      MOCKED_CONTEXT.workspace,
+      MOCKED_CONTEXT.account,
       [1]
     )
 
@@ -65,7 +65,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog/pvt/product/1`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog/pvt/product/1`
     )
   })
 
@@ -92,7 +92,7 @@ describe('Products Client', () => {
     ])
 
     const returnValue = await ProductsClient.getBrandsNames(
-      MOCKED_CONTEXT.workspace
+      MOCKED_CONTEXT.account
     )
 
     const returnExpect = [
@@ -103,7 +103,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list`
     )
   })
 
@@ -128,7 +128,7 @@ describe('Products Client', () => {
     })
 
     const returnValue = await ProductsClient.getCollectionsNames(
-      MOCKED_CONTEXT.workspace
+      MOCKED_CONTEXT.account
     )
 
     const returnExpect = [{ id: 143, name: 'All' }]
@@ -136,7 +136,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/collection/search`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pvt/collection/search`
     )
   })
 
@@ -175,7 +175,7 @@ describe('Products Client', () => {
     ])
 
     const returnValue = await ProductsClient.getCategoryName(
-      MOCKED_CONTEXT.workspace
+      MOCKED_CONTEXT.account
     )
 
     const returnExpect = [
@@ -187,7 +187,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
     )
   })
 
@@ -216,7 +216,7 @@ describe('Products Client', () => {
     ])
 
     const returnValue = await ProductsClient.getCategoryId(
-      MOCKED_CONTEXT.workspace
+      MOCKED_CONTEXT.account
     )
 
     const returnExpect = [9282, 9283]
@@ -224,7 +224,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
     )
   })
 
@@ -248,7 +248,7 @@ describe('Products Client', () => {
     ])
 
     const returnValue = await ProductsClient.getSpecificationName(
-      MOCKED_CONTEXT.workspace,
+      MOCKED_CONTEXT.account,
       [9281]
     )
 
@@ -257,7 +257,7 @@ describe('Products Client', () => {
     expect(returnValue).toStrictEqual(returnExpect)
 
     return expect(get).toHaveBeenCalledWith(
-      `https://${MOCKED_CONTEXT.workspace}.vtexcommercestable.com.br/api/catalog_system/pub/specification/field/listByCategoryId/9281`
+      `https://${MOCKED_CONTEXT.account}.vtexcommercestable.com.br/api/catalog_system/pub/specification/field/listByCategoryId/9281`
     )
   })
 })

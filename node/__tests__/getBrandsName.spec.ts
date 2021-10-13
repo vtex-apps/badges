@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { getBrandsNames } from '../resolvers/getBrandsNames'
 
-describe('Test getBradsName', () => {
+describe('Test getBrandsName', () => {
   // @ts-ignore
   const ctx = {
     clients: {
@@ -14,7 +14,7 @@ describe('Test getBradsName', () => {
     },
   } as Context
 
-  it('Test if client is to be called 1 time', () => {
+  it('Test if client is called once', () => {
     getBrandsNames('', '', ctx)
     expect(ctx.clients.products.getBrandsNames).toBeCalledTimes(1)
   })

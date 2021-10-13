@@ -15,7 +15,7 @@ describe('Test getSkuNames', () => {
     },
   } as Context
 
-  it('Test if getSkuNames is been called 1 time', async () => {
+  it('Test if getSkuNames has been called once', async () => {
     await getSkuNames('', '', ctx)
     expect(ctx.clients.skus.getSkuId).toBeCalledTimes(1)
     expect(ctx.clients.skus.getSkuName).toBeCalledTimes(1)

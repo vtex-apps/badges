@@ -15,7 +15,7 @@ describe('Test getSpecificationName', () => {
     },
   } as Context
 
-  it('Test if getProductsNames is been called 1 time', async () => {
+  it('Test if getProductsNames has been called once', async () => {
     await getSpecificationName('', '', ctx)
     expect(ctx.clients.products.getCategoryId).toBeCalledTimes(1)
     expect(ctx.clients.products.getSpecificationName).toBeCalledTimes(1)

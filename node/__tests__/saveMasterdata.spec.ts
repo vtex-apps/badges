@@ -2,7 +2,7 @@
 import { saveMasterdata } from '../resolvers/saveMasterdata'
 
 describe('Test saveMasterdata', () => {
-  it('Test if saveMasterdata is been called', async () => {
+  it('Test if saveMasterdata has been called', async () => {
     // @ts-ignore
     const ctx = {
       clients: {
@@ -36,7 +36,7 @@ describe('Test saveMasterdata', () => {
     expect(ctx.clients.badges.save).toBeCalledWith(params.saveData)
   })
 
-  it('Test if saveMasterdata is been called with a rejectValue', async () => {
+  it('Test if saveMasterdata has been called with a rejectValue', async () => {
     // @ts-ignore
     const ctx = {
       clients: {

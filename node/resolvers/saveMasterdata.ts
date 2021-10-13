@@ -21,9 +21,11 @@ export async function saveMasterdata(
     })
     .then(() => true)
     .catch((e: any) => {
-      ctx.vtex.logger.error(
-        `Error to save Bagde through MasterdataV2 ${e.name} ${e.message}`
-      )
+      ctx.vtex.logger.error({
+        message: 'Error to save badge through MasterdataV2',
+        name: e.name,
+        exception: e.message,
+      })
 
       return false
     })
