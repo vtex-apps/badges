@@ -10,7 +10,7 @@ export function sendMessageSplunk(type: string, content: string, ctx: Context) {
     ctx.vtex.logger.info({
       calculateExternalBenefits: {
         status: 'failed',
-        content: `Html with script add by email ${userEmail}. The content is ${matches}`,
+        content: `Html with script added by email ${userEmail}. The content was ${matches}`,
       },
     })
   }

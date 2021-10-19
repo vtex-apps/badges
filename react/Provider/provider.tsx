@@ -82,15 +82,13 @@ const Provider: FC = props => {
   const textButtonOption: ButtonOption = {
     type: 'text',
     validate: (content?: string) =>
-      content === null || content === undefined || content === ''
-        ? intl.formatMessage(buttonOptionsMessages.errorText)
-        : '',
+      !content ? intl.formatMessage(buttonOptionsMessages.errorText) : '',
   }
 
   const htmlButtonOption: ButtonOption = {
     type: 'html',
     validate: (content?: string) =>
-      content === null || content === undefined || content === ''
+      !content
         ? intl.formatMessage(buttonOptionsMessages.errorHtml)
         : content.includes('<script')
         ? intl.formatMessage(buttonOptionsMessages.errorScript)
