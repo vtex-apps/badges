@@ -185,6 +185,6 @@ describe('Test valdiation', () => {
 
     expect(() => {
       validation(validationValues, true, idBadges)
-    }).toThrow('Scripts not allowed to add')
+    }).toThrow('Adding scripts is not allowed')
   })
 })

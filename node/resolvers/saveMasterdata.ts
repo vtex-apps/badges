@@ -19,7 +19,6 @@ export async function saveMasterdata(
       simpleStatements: saveValues.saveData.simpleStatements,
       type: saveValues.saveData.type,
     })
-    .then(() => true)
     .catch((e: any) => {
       ctx.vtex.logger.error({
         message: 'Error to save badge through MasterdataV2',
