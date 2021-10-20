@@ -18,10 +18,12 @@ export function validation(
 
   if (content.length === 0) {
     throw new Error('It is necessary to send a content')
+  } else if (content.includes('<script')) {
+    throw new Error('Adding scripts is not allowed')
   }
 
   if (operator.length === 0) {
-    throw new Error('It is necessary to send a operator')
+    throw new Error('It is necessary to send an operator')
   }
 
   if (simpleStatements.length === 0) {
@@ -34,7 +36,7 @@ export function validation(
 
   if (edit) {
     if (!idBadges) {
-      throw new Error('It is necessary to send a ID')
+      throw new Error('It is necessary to send an ID')
     }
   }
 }

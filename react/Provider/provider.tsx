@@ -1,7 +1,7 @@
 /* eslint-disable vtex/prefer-early-return */
 import type { FC } from 'react'
+import React, { useEffect, useMemo, useState, useContext } from 'react'
 import { useIntl } from 'react-intl'
-import React, { useMemo, useState, useContext } from 'react'
 import { useLazyQuery, useMutation, useQuery } from 'react-apollo'
 import { ToastContext } from 'vtex.styleguide'
 
@@ -16,16 +16,12 @@ import getSpecificationName from '../queries/getSpecificationName.gql'
 import searchMasterdata from '../queries/searchMasterdata.gql'
 import deleteMasterdata from '../queries/deleteMasterdata.gql'
 import updateMasterdata from '../queries/updateMasterdata.gql'
+import settingsSchema from '../queries/settingsSchema.gql'
 import Context from '../Context/context'
-import { provider } from '../utils/definedMessages'
-import {
-  htmlButtonOption,
-  imageButtonOption,
-  textButtonOption,
-  ButtonOptions,
-} from '../utils/buttonOptions'
+import { provider, buttonOptionsMessages } from '../utils/definedMessages'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
-import { PriorityOptions } from '../typings/priorityOptions'
+import { ButtonOptions } from '../utils/buttonOptions'
+import { PriorityOptions } from '../utils/priorityOptions'
 
 const Provider: FC = props => {
   const intl = useIntl()
@@ -55,6 +51,7 @@ const Provider: FC = props => {
   const [modalEdit, setModalEdit] = useState(false)
   const [modalError, setModalError] = useState(false)
   const [showImage, setShowImage] = useState(false)
+  const [buttonHtml, setButtonHtml] = useState(false)
 
   const [deleteId, setDeleteId] = useState<string>()
   const [editId, setEditId] = useState<string>()
@@ -72,6 +69,31 @@ const Provider: FC = props => {
   const { data: dataCollectionsNames } = useQuery(getCollectionsNames)
   const { data: dataCategoryNames } = useQuery(getCategoryName)
   const { data: dataSpecificationNames } = useQuery(getSpecificationName)
+  const { data: dataSettingsSchema } = useQuery(settingsSchema)
+
+  const imageButtonOption: ButtonOption = {
+    type: 'image',
+    validate: (content?: any) =>
+      content === null || content === undefined
+        ? intl.formatMessage(buttonOptionsMessages.errorImage)
+        : '',
+  }
+
+  const textButtonOption: ButtonOption = {
+    type: 'text',
+    validate: (content?: string) =>
+      !content ? intl.formatMessage(buttonOptionsMessages.errorText) : '',
+  }
+
+  const htmlButtonOption: ButtonOption = {
+    type: 'html',
+    validate: (content?: string) =>
+      !content
+        ? intl.formatMessage(buttonOptionsMessages.errorHtml)
+        : content.includes('<script')
+        ? intl.formatMessage(buttonOptionsMessages.errorScript)
+        : '',
+  }
 
   const nameProducts = useMemo(() => {
     if (dataProductsNames === undefined) return
@@ -161,6 +183,18 @@ const Provider: FC = props => {
 
     return []
   }, [data])
+
+  useEffect(() => {
+    const value = dataSettingsSchema?.appSettings?.message
+
+    if (value) {
+      if (value.includes('false')) {
+        setButtonHtml(false)
+      } else {
+        setButtonHtml(true)
+      }
+    }
+  }, [dataSettingsSchema])
 
   useMemo(async () => {
     searchMasterdataLazy({
@@ -474,6 +508,7 @@ const Provider: FC = props => {
         setPriority,
         modalError,
         setModalError,
+        buttonHtml,
       }}
     >
       {props.children}

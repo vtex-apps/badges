@@ -1,0 +1,6 @@
+query settingsSchema {
+  appSettings(app: "vtex.badges", version: "2.x")
+    @context(provider: "vtex.apps-graphql") {
+    message
+  }
+}

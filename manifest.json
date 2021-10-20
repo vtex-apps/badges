@@ -15,7 +15,8 @@
     "vtex.store-image": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
-    "vtex.product-context": "0.x"
+    "vtex.product-context": "0.x",
+    "vtex.apps-graphql": "2.x"
   },
   "builders": {
     "react": "3.x",
@@ -60,5 +61,16 @@
     {
       "name": "ADMIN_DS"
     }
-  ]
+  ],
+  "settingsSchema": {
+    "title": "App Badges",
+    "type": "object",
+    "properties": {
+      "activeHtml": {
+        "title": "Activate HTML",
+        "description": "Make it possible to add HTML on badges",
+        "type": "boolean"
+      }
+    }
+  }
 }

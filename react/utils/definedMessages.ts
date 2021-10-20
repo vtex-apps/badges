@@ -10,6 +10,7 @@ export const button = defineMessages({
   image: { id: 'badges.button.image' },
   text: { id: 'badges.button.text' },
   html: { id: 'badges.button.html' },
+  description: { id: 'badges.button.description' },
 })
 
 export const buttonSave = defineMessages({
@@ -143,4 +144,11 @@ export const autocomplete = defineMessages({
 export const modalError = defineMessages({
   textError: { id: 'badges.modal.error.text' },
   text: { id: 'badges.modal.error.text2' },
+})
+
+export const buttonOptionsMessages = defineMessages({
+  errorImage: { id: 'badges.button.option.error.image' },
+  errorText: { id: 'badges.button.option.error.text' },
+  errorHtml: { id: 'badges.button.option.error.html' },
+  errorScript: { id: 'badges.button.option.error.script' },
 })

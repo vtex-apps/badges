@@ -1,5 +1,5 @@
 import { ButtonOptions } from '../utils/buttonOptions'
-import { PriorityOptions } from '../typings/priorityOptions'
+import { PriorityOptions } from '../utils/priorityOptions'
 import { ShowAlertOptions } from '../utils/showAlertOptions'
 
 export const values = {
@@ -100,4 +100,5 @@ export const values = {
   setPriority: jest.fn(),
   modalError: true,
   setModalError: jest.fn(),
+  buttonHtml: false,
 }

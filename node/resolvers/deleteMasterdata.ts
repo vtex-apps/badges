@@ -7,7 +7,7 @@ export async function deleteMasterdata(
     .delete(idBadge.id)
     .then(() => true)
     .catch((e: any) => {
-      ctx.vtex.logger.error(`Error to delete Bagde through MasterdataV2 ${e}`)
+      ctx.vtex.logger.error(`Error to delete Badge through MasterdataV2 ${e}`)
       false
     })
 }

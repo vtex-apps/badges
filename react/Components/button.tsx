@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import React, { useContext } from 'react'
 import { useIntl } from 'react-intl'
-import { ButtonGroup, Button } from 'vtex.styleguide'
+import { ButtonGroup, Button, Tooltip, IconInfo } from 'vtex.styleguide'
 
 import Context from '../Context/context'
 import { button } from '../utils/definedMessages'
@@ -13,7 +13,16 @@ const ButtonArea: FC = () => {
 
   return (
     <>
-      <div className="mt5 mb5"> {intl.formatMessage(button.title)}</div>
+      <p className="mt5 mb5">
+        <div>
+          {intl.formatMessage(button.title)}
+          <Tooltip label={intl.formatMessage(button.description)}>
+            <span className="c-on-base pointer ml2 mt2">
+              <IconInfo />
+            </span>
+          </Tooltip>
+        </div>
+      </p>
       <ButtonGroup
         buttons={[
           <Button
@@ -34,6 +43,7 @@ const ButtonArea: FC = () => {
             isActiveOfGroup={provider.button === 'html'}
             onClick={() => provider.setButton('html')}
             testId="button-html"
+            disabled={!provider.buttonHtml}
           >
             {intl.formatMessage(button.html)}
           </Button>,

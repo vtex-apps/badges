@@ -1,3 +1,4 @@
+import { sendMessageSplunk } from '../utils/sendMessageSplunk'
 import { validation } from '../utils/validation'
 
 export async function updateMasterdata(
@@ -5,6 +6,8 @@ export async function updateMasterdata(
   { idBadges, saveValues }: { idBadges: string; saveValues: UpdateValues },
   ctx: Context
 ) {
+  sendMessageSplunk(saveValues.type, saveValues.content, ctx)
+
   validation(saveValues, true, idBadges)
 
   return ctx.clients.badges
@@ -19,7 +22,7 @@ export async function updateMasterdata(
     .then(() => true)
     .catch((e: any) => {
       ctx.vtex.logger.error(
-        `Error to edit Bagde through MasterdataV2 ${e.name} ${e.message}`
+        `Error to edit Badge through MasterdataV2 ${e.name} ${e.message}`
       )
 
       return false
