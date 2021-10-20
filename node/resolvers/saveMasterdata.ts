@@ -10,12 +10,23 @@ export async function saveMasterdata(
 
   validation(saveValues.saveData, false)
 
-  return ctx.clients.badges.save({
-    content: saveValues.saveData.content,
-    name: saveValues.saveData.name,
-    operator: saveValues.saveData.operator,
-    priority: saveValues.saveData.priority,
-    simpleStatements: saveValues.saveData.simpleStatements,
-    type: saveValues.saveData.type,
-  })
+  return ctx.clients.badges
+    .save({
+      content: saveValues.saveData.content,
+      name: saveValues.saveData.name,
+      operator: saveValues.saveData.operator,
+      priority: saveValues.saveData.priority,
+      simpleStatements: saveValues.saveData.simpleStatements,
+      type: saveValues.saveData.type,
+    })
+    .then(() => true)
+    .catch((e: any) => {
+      ctx.vtex.logger.error({
+        message: 'Error to save badge through MasterdataV2',
+        name: e.name,
+        exception: e.message,
+      })
+
+      return false
+    })
 }
