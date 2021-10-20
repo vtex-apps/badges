@@ -19,7 +19,7 @@ export function validation(
   if (content.length === 0) {
     throw new Error('It is necessary to send a content')
   } else if (content.includes('<script')) {
-    throw new Error('Scripts not allowed to add')
+    throw new Error('Adding scripts is not allowed')
   }
 
   if (operator.length === 0) {

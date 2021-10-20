@@ -22,7 +22,7 @@ export async function updateMasterdata(
     .then(() => true)
     .catch((e: any) => {
       ctx.vtex.logger.error(
-        `Error to edit Bagde through MasterdataV2 ${e.name} ${e.message}`
+        `Error to edit Badge through MasterdataV2 ${e.name} ${e.message}`
       )
 
       return false
