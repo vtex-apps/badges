@@ -36,12 +36,12 @@ Nessa página é possível criar uma nova badge
 
 - Adicionando o nome da badges
 - Adicionando o conteúdo da badge (como imagem, texto ou html)
-- Adicionar a prioridade da badges
+- Adicionando a prioridade da badges
 - Adicionando uma regra de ativação
 
-Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo
+Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo.
 
-![Captura de Tela 2021-09-28 às 09 03 54 (2)](https://user-images.githubusercontent.com/80836180/135083322-c8dc3177-5bc0-465f-858f-d0d14c0e6c01.png)
+<img width="1440" alt="Captura de Tela 2021-10-22 às 11 02 41" src="https://user-images.githubusercontent.com/80836180/138469242-868ff4a2-e808-4371-8f33-099e39743877.png">
 
 Nesse mesmo gerenciamento pode-se editar ou excluir uma badge em questão, basta-se mudar a aba do formulário de "Adicionar Badge" para "Editar Badges" e ser clicado no botão de "LineActions", como pode-se ser visto na imagem abaixo:
 
@@ -49,7 +49,7 @@ Nesse mesmo gerenciamento pode-se editar ou excluir uma badge em questão, basta
 
 ### Na Store
 
-Agora com as badges cadastradas, é possível adiciona-las em sua loja. Para o correto funcionamento das mesmas é necessário que o componente das badges seja aderida dentro de uma página de produto (store.product) ou dentro de um product-summary. O exemplo abaixo demonstra como colocar uma badges na página de produto
+Agora com as badges cadastradas, é possível adiciona-las em sua loja. Para o correto funcionamento das mesmas é necessário que o componente das badges seja aderida dentro de uma página de produto (store.product) ou dentro de um product-summary. O exemplo abaixo demonstra como colocar uma badges na página de produto.
 
 ```diff
   "store.product": {
@@ -91,13 +91,13 @@ Agora com as badges cadastradas, é possível adiciona-las em sua loja. Para o c
 
 | Nome da Prop     | Tipo     | Descrição                                                                                                                                                       |
 | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `numberOfBadges` | `number` | Define quantas badges ser�o renderizadas                                                                                                                        |
+| `numberOfBadges` | `number` | Define quantas badges serão renderizadas                                                                                                                        |
 | `text`           | `array`  | Contém definições de valores que serão usados quando se renderiza uma badge de texto. Saiba mais sobre essas props no https://github.com/vtex-apps/rich-text    |
 | `image`          | `array`  | Contém definições de valores que serão usados quando se renderiza uma badge de imagem. Saiba mais sobre essas props no https://github.com/vtex-apps/store-image |
 
 ### O resultado final
 
-Com todas as etapas concluídas já é possível conferir o resultado final em sua store. A ordem das badges é definida de acordo com a prioridade escolhida pelas badges. O exemplo abaixo mostra como ficaria a uma store que foi seguido o passo a passo desse tutorial
+Com todas as etapas concluídas já é possível conferir o resultado final em sua store. A ordem das badges é definida de acordo com a prioridade escolhida na hora de cadastrá-las. O exemplo abaixo mostra como ficaria a uma store que foi seguido o passo a passo desse tutorial.
 
 <img width="1440" alt="Captura de Tela 2021-09-28 às 10 27 46" src="https://user-images.githubusercontent.com/80836180/135096186-96473ef8-164f-4c46-a9e9-2978708dd7e4.png">
 
