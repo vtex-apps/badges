@@ -30,7 +30,7 @@ Após instalar o aplicativo em sua loja, já estará disponível em seu ambiente
 Para utilizá-lo, basta acessar a barra lateral em "OUTROS", a qual deve conter o aplicativo "Gerenciamento de Badges".
 Clicando no aplicativo, deverá visualizar a seguinte página:
 
-![Captura de Tela 2021-09-28 às 08 53 05 (2)](https://user-images.githubusercontent.com/80836180/135082491-1a9996ab-fff6-4e3e-92a8-02ae2991b080.png)
+<img width="1440" alt="Captura de Tela 2021-10-22 às 11 21 22" src="https://user-images.githubusercontent.com/80836180/138470628-9936a747-96ec-40a3-8ab5-d57115654e2d.png">
 
 Nessa página é possível criar uma nova badge
 
