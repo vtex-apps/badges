@@ -7,6 +7,7 @@
   "badges.button.text": "Texto",
   "badges.button.html": "HTML",
   "badges.button.save": "Guardar",
+  "badges.button.description": "Para usar el botón HTML, habilítelo en 'Badges de aplicaciones' en 'Mis aplicaciones'",
   "badges.conditions.rule": "Reglas de activación",
   "badges.conditions.select.rule": "Selecciona la regla",
   "badges.conditions.header.prefix": "Corresponder a",
@@ -72,5 +73,9 @@
   "badges.autocomplete.placeholder": "Comienza a digitar para que aparezcan las opciones",
   "badges.autocomplete.text": "Agrega el ID del(dela) ",
   "badges.modal.error.text": "No hay registro de ",
-  "badges.modal.error.text2": "Por favor, agrega algún(alguna)  "
+  "badges.modal.error.text2": "Por favor, agrega algún(alguna)  ",
+  "badges.button.option.error.image": "Agregue una imagen en el campo 'Tipo de badge'",
+  "badges.button.option.error.text": "Rellena el campo 'Introduce el texto del badge'",
+  "badges.button.option.error.html": "Rellena el campo 'Introduce la dirección HTML del badge'",
+  "badges.button.option.error.script": "No está permitido agregar scripts en HTML."
 }
