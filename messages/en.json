@@ -31,6 +31,8 @@
   "badges.edit.style": "Badge type",
   "badges.edit.text.show.rows": "Number per page",
   "badges.edit.text.of": "of",
+  "badges.edit.edit": "Edit",
+  "badges.edit.delete": "Delete",
   "badges.provider.error.name": "Complete the field 'Badge name'",
   "badges.provider.error.image": "Add an image to the field 'Badge type'",
   "badges.provider.error.text": "Complete the field 'Insert badge text'",

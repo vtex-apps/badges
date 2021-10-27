@@ -1,0 +1,13 @@
+{
+  "name": "Aplicativo de Badges",
+  "headline": "Um aplicativo que ajuda a criar, gerenciar e adicionar badges para sua store.",
+  "overview": "Esse aplicativo permite ao usuário estilizar sua loja por meio da adição de Badges (textos, imagens e/ou htmls), na posição e na quantidade que desejar, deixando sua loja mais a sua cara! O gerenciamento dessas Badges é feito pela interface do Admin",
+  "features": [
+    "Crie, edite e exclua suas badges",
+    "Configure quantas e quais badges serão utilizadas na sua store"
+  ],
+  "websiteURL": "https://vtex.com/",
+  "support": {
+    "url": "https://support.vtex.com/hc/requests"
+  }
+}
