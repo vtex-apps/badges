@@ -53,6 +53,8 @@ export const edit = defineMessages({
   textShowRows: { id: 'badges.edit.text.show.rows' },
   textOf: { id: 'badges.edit.text.of' },
   priority: { id: 'badges.edit.priority' },
+  edit: { id: 'badges.edit.edit' },
+  delete: { id: 'badges.edit.delete' },
 })
 
 export const provider = defineMessages({

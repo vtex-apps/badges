@@ -31,6 +31,8 @@
   "badges.edit.style": "Tipo de Badge",
   "badges.edit.text.show.rows": "Cantidad por página",
   "badges.edit.text.of": "de",
+  "badges.edit.edit": "Editar",
+  "badges.edit.delete": "Eliminar",
   "badges.provider.error.name": "Rellena el campo 'Nombre del badge'",
   "badges.provider.error.image": "Agregue una imagen en el campo 'Tipo de badge'",
   "badges.provider.error.text": "Rellena el campo 'Introduce el texto del badge'",

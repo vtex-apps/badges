@@ -27,13 +27,13 @@ const EditBadges: FC = () => {
 
   const lineActions = [
     {
-      label: () => `Editar`,
+      label: () => intl.formatMessage(edit.edit),
       onClick: ({ rowData }: { rowData: any }) => {
         provider.clickEdit(rowData.index, rowData.id)
       },
     },
     {
-      label: () => `Excluir`,
+      label: () => intl.formatMessage(edit.delete),
       isDangerous: true,
       onClick: ({ rowData }: { rowData: any }) => {
         provider.clickDelete(rowData.id)
