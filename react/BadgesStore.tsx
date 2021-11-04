@@ -13,7 +13,7 @@ const BadgesStore: StorefrontFunctionComponent = (props: PropsStore) => {
 
   const where = getWhere(props)
 
-  const pageSize = props.numberOfBadges ? props.numberOfBadges : '0'
+  const pageSize = props.numberOfBadges ? props.numberOfBadges : '1'
 
   const { data } = useQuery<BadgesData>(searchMasterdata, {
     variables: { where, pageSize },
