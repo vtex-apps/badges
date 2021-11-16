@@ -1,10 +1,10 @@
 {
-  "name": "Aplicativo de Badges",
-  "headline": "Um aplicativo que ajuda a criar, gerenciar e adicionar badges para sua store.",
-  "overview": "Esse aplicativo permite ao usuário possa adicionar, editar e excluir badges que serão adicionadas posteriormente na sua store.",
+  "name": "Badges app",
+  "headline": "An app that helps you create, manage and add badges in your store.",
+  "overview": "This app allows users adding, editing and deleting badges that will later be added to their store.",
   "features": [
-    "Crie, edite e exclua suas badges",
-    "Configure quantas e quais badges serão utilizadas na sua store"
+    "Create, edit and delete your badges",
+    "Configure how many and which badges will be used in your store"
   ],
   "websiteURL": "https://vtex.com/",
   "support": {
