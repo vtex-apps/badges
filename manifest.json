@@ -72,5 +72,12 @@
         "type": "boolean"
       }
     }
+  },
+  "billingOptions": {
+    "type": "free",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "availableCountries": ["*"]
   }
 }
