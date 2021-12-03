@@ -9,7 +9,7 @@ O aplicativo de Badges tem como objetivo adicionar Badges de conteúdo em seu e-
 Para instalar o aplicativo no admin e, assim, gerenciar suas badges, deve-se entrar em seu terminal, logar no workspace e digitar o comando:
 
 ```json
-  vtex install vtex.badges@1.x
+  vtex install vtex.badges@3.x
 ```
 
 ### A Store
@@ -17,7 +17,7 @@ Para instalar o aplicativo no admin e, assim, gerenciar suas badges, deve-se ent
 Para disponibilizar o componente em sua loja, é necessário adicionar nas "dependencies" do manifest o seguinte código:
 
 ```json
-  "vtex.badges": "1.x"
+  "vtex.badges": "3.x"
 ```
 
 Em seguida, já é possível adicionar o componente de badges em sua loja.
@@ -45,7 +45,7 @@ Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo
 
 Nesse mesmo gerenciamento pode-se editar ou excluir uma badge em questão, basta-se mudar a aba do formulário de "Adicionar Badge" para "Editar Badges" e ser clicado no botão de "LineActions", como pode-se ser visto na imagem abaixo:
 
-![Captura de Tela 2021-09-28 às 09 19 36 (2)](https://user-images.githubusercontent.com/80836180/135085400-a9be20a6-adb7-461a-91a2-95601c06a3b9.png)
+<img width="1440" alt="Captura de Tela 2021-12-03 às 10 22 10" src="https://user-images.githubusercontent.com/80836180/144609583-c6583e99-79d6-4224-b267-07c6c3f54767.png">
 
 ### Na Store
 
@@ -99,7 +99,7 @@ Agora com as badges cadastradas, é possível adiciona-las em sua loja. Para o c
 
 Com todas as etapas concluídas já é possível conferir o resultado final em sua store. A ordem das badges é definida de acordo com a prioridade escolhida na hora de cadastrá-las. O exemplo abaixo mostra como ficaria a uma store que foi seguido o passo a passo desse tutorial.
 
-<img width="1440" alt="Captura de Tela 2021-09-28 às 10 27 46" src="https://user-images.githubusercontent.com/80836180/135096186-96473ef8-164f-4c46-a9e9-2978708dd7e4.png">
+<img width="1432" alt="Captura de Tela 2021-12-03 às 10 16 28" src="https://user-images.githubusercontent.com/80836180/144608846-590d4d12-4924-479c-976b-4573a6b6bacc.png">
 
 **Upcoming documentation:**
 
