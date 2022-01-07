@@ -1,11 +1,1 @@
-{
-  "extends": "@vtex/tsconfig",
-  "compilerOptions": {
-    "noEmitOnError": false,
-    "lib": ["dom"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "target": "es2019"
-  },
-  "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts"]
-}
+{"compilerOptions":{"alwaysStrict":true,"esModuleInterop":true,"module":"commonjs","moduleResolution":"node","noImplicitAny":true,"noImplicitReturns":true,"noImplicitThis":true,"noUnusedLocals":true,"noUnusedParameters":true,"skipLibCheck":true,"strictFunctionTypes":true,"strictNullChecks":true,"strictPropertyInitialization":true,"target":"es2019","allowJs":true,"inlineSourceMap":true,"inlineSources":true,"lib":["es2019","dom"],"listEmittedFiles":true,"noEmitOnError":false,"outDir":"/cache/build/build_vtex_master/vtex.badges@3.0.0/dist/service-node/app","rootDir":"/cache/build/build_vtex_master/vtex.badges@3.0.0","sourceMap":false,"typeRoots":["/cache/build/build_vtex_master/vtex.badges@3.0.0/src/node/node_modules/@types"],"types":["node"],"baseUrl":".","paths":{"vtex.badges":["/cache/build/build_vtex_master/vtex.badges@3.0.0/public/@types/vtex.badges"]}},"exclude":["node_modules"],"files":["/cache/build/build_vtex_master/vtex.badges@3.0.0/bundle.ts"],"typeAcquisition":{"enable":false},"extends":"@vtex/tsconfig","include":["./typings/*.d.ts","./**/*.tsx","./**/*.ts"]}
