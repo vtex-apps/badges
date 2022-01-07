@@ -16,7 +16,7 @@ export class Skus extends JanusClient {
 
   public async getSkuId(workspace: string) {
     const value = await this.http.get(
-      `https://${workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
+      `http://${workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
     )
 
     const sku = Object.entries(value.data)
@@ -44,7 +44,7 @@ export class Skus extends JanusClient {
     for (const id of ids) {
       promises.push(
         this.http.get(
-          `https://${workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/sku/stockkeepingunitbyid/${id}`
+          `http://${workspace}.vtexcommercestable.com.br/api/catalog_system/pvt/sku/stockkeepingunitbyid/${id}`
         )
       )
     }

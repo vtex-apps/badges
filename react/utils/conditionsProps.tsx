@@ -104,7 +104,11 @@ function conditionsFunction(
 export function getWhere(props: PropsStore) {
   if (props?.productQuery) {
     const { product } = props?.productQuery
-    const { selectedItem } = useProduct()
+    const { selectedItem } = useProduct() ?? {} 
+
+    if (!selectedItem){
+      return ''
+    }   
 
     let where =
       `(simpleStatements.subject=brandId AND simpleStatements.object.id="${product.brandId}") OR ` +

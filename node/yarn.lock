@@ -7404,13 +7404,9 @@ verror@1.10.0:
   version "2.8.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@2.8.0/public/@types/vtex.apps-graphql#4fd47b1281c4d36e8abb1cfa4daea83bc739eca1"
 
-"vtex.badges@https://badges--anamb.myvtex.com/_v/private/typings/linked/v1/vtex.badges@2.1.0+build1633461126/public/@types/vtex.badges":
-  version "2.1.0"
-  resolved "https://badges--anamb.myvtex.com/_v/private/typings/linked/v1/vtex.badges@2.1.0+build1633461126/public/@types/vtex.badges#8e3945cb91eac955646b7e5401e35374926e9be7"
-
-"vtex.condition-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@2.3.0/public/@types/vtex.condition-layout":
-  version "2.3.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@2.3.0/public/@types/vtex.condition-layout#257879f8db6c7e168cbbf488db5f948dcf249ca5"
+"vtex.condition-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@2.4.0/public/@types/vtex.condition-layout":
+  version "2.4.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@2.4.0/public/@types/vtex.condition-layout#b0877658153bc0b8814e60ff602680e30ec35f77"
 
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles":
   version "1.0.0"
