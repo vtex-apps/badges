@@ -1,8 +1,8 @@
 export async function getCategoryName(_: unknown, __: unknown, ctx: Context) {
   const {
     clients: { products },
-    vtex: { workspace },
+    vtex: { account },
   } = ctx
 
-  return products.getCategoryName(workspace)
+  return products.getCategoryName(account)
 }

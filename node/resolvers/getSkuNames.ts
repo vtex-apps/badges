@@ -1,11 +1,11 @@
 export async function getSkuNames(_: unknown, __: unknown, ctx: Context) {
   const {
     clients: { skus },
-    vtex: { workspace },
+    vtex: { account },
   } = ctx
 
-  const ids = await skus.getSkuId(workspace)
-  const names = await skus.getSkuName(workspace, ids)
+  const ids = await skus.getSkuId(account)
+  const names = await skus.getSkuName(account, ids)
 
   return names
 }

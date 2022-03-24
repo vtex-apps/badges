@@ -1,8 +1,8 @@
 export async function getProductsIds(_: unknown, __: unknown, ctx: Context) {
   const {
     clients: { products },
-    vtex: { workspace },
+    vtex: { account },
   } = ctx
 
-  return products.getProductsId(workspace)
+  return products.getProductsId(account)
 }

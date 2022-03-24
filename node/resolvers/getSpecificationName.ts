@@ -5,11 +5,11 @@ export async function getSpecificationName(
 ) {
   const {
     clients: { products },
-    vtex: { workspace },
+    vtex: { account },
   } = ctx
 
-  const ids = await products.getCategoryId(workspace)
-  const names = await products.getSpecificationName(workspace, ids)
+  const ids = await products.getCategoryId(account)
+  const names = await products.getSpecificationName(account, ids)
 
   return names
 }
