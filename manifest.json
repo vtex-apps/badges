@@ -1,7 +1,7 @@
 {
   "name": "badges",
   "vendor": "vtex",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "title": "App Badges",
   "description": "",
   "mustUpdateAt": "2022-08-28",
@@ -78,6 +78,8 @@
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
-    "availableCountries": ["*"]
+    "availableCountries": [
+      "*"
+    ]
   }
 }
