@@ -5,8 +5,7 @@ export async function getCollectionsNames(
 ) {
   const {
     clients: { products },
-    vtex: { account },
   } = ctx
 
-  return products.getCollectionsNames(account)
+  return products.getCollectionsNames()
 }

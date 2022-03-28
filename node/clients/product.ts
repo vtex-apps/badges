@@ -14,9 +14,9 @@ export class Products extends JanusClient {
     })
   }
 
-  public async getProductsId(account: string) {
+  public async getProductsId() {
     const value = await this.http.get(
-      `http://${account}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
+      `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pvt/products/GetProductAndSkuIds`
     )
 
     const products = Object.entries(value.data)
@@ -30,7 +30,7 @@ export class Products extends JanusClient {
     return ids
   }
 
-  public async getProductsName(account: string, ids: number[]) {
+  public async getProductsName(ids: number[]) {
     const names: Name[] = []
 
     const promises = []
@@ -38,7 +38,7 @@ export class Products extends JanusClient {
     for (const id of ids) {
       promises.push(
         this.http.get(
-          `http://${account}.vtexcommercestable.com.br/api/catalog/pvt/product/${id}`
+          `http://${this.context.account}.vtexcommercestable.com.br/api/catalog/pvt/product/${id}`
         )
       )
     }
@@ -50,11 +50,11 @@ export class Products extends JanusClient {
     return names
   }
 
-  public async getBrandsNames(account: string) {
+  public async getBrandsNames() {
     const names: Name[] = []
 
     const value = await this.http.get(
-      `http://${account}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list`
+      `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pvt/brand/list`
     )
 
     value.forEach((element: Name) => {
@@ -64,11 +64,11 @@ export class Products extends JanusClient {
     return names
   }
 
-  public async getCollectionsNames(account: string) {
+  public async getCollectionsNames() {
     const names: Name[] = []
 
     const value = await this.http.get(
-      `http://${account}.vtexcommercestable.com.br/api/catalog_system/pvt/collection/search`
+      `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pvt/collection/search`
     )
 
     const { items } = value
@@ -80,11 +80,11 @@ export class Products extends JanusClient {
     return names
   }
 
-  public async getCategoryName(account: string) {
+  public async getCategoryName() {
     const names: Name[] = []
 
     const categories = await this.http.get(
-      `http://${account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
+      `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
     )
 
     categories.forEach(
@@ -99,11 +99,11 @@ export class Products extends JanusClient {
     return names
   }
 
-  public async getCategoryId(account: string) {
+  public async getCategoryId() {
     const ids: number[] = []
 
     const value = await this.http.get(
-      `http://${account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
+      `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pub/category/tree/100`
     )
 
     value.forEach(async (element: any) => {
@@ -116,7 +116,7 @@ export class Products extends JanusClient {
     return ids
   }
 
-  public async getSpecificationName(account: string, ids: number[]) {
+  public async getSpecificationName(ids: number[]) {
     const names: Array<{ name: string }> = []
 
     const promises = []
@@ -124,7 +124,7 @@ export class Products extends JanusClient {
     for (const id of ids) {
       promises.push(
         this.http.get(
-          `http://${account}.vtexcommercestable.com.br/api/catalog_system/pub/specification/field/listByCategoryId/${id}`
+          `http://${this.context.account}.vtexcommercestable.com.br/api/catalog_system/pub/specification/field/listByCategoryId/${id}`
         )
       )
     }
