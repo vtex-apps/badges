@@ -1,7 +1,7 @@
 {
   "name": "badges",
   "vendor": "vtex",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "title": "App Badges",
   "description": "",
   "mustUpdateAt": "2022-08-28",
@@ -40,22 +40,22 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "{{account}}.myvtex.com",
-        "path": "/api/*"
+        "host": "api.vtex.com",
+        "path": "/api/catalog/*"
       }
     },
     {
       "name": "outbound-access",
       "attrs": {
         "host": "{{workspace}}.vtexcommercestable.com.br",
-        "path": "/api/*"
+        "path": "/api/catalog/*"
       }
     },
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "api.vtex.com",
-        "path": "/api/*"
+        "host": "{{accunt}}.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/*"
       }
     },
     {
@@ -78,8 +78,6 @@
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     },
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   }
 }
