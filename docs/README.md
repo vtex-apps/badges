@@ -36,7 +36,7 @@ Nessa página é possível criar uma nova badge
 
 - Adicionando o nome da badges
 - Adicionando o conteúdo da badge (como imagem, texto ou html)
-- Adicionando a prioridade da badges
+- Adicionando a prioridade da badges (sendo 1 a prioridade máxima e 5 a menor)
 - Adicionando uma regra de ativação
 
 Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo.
