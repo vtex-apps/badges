@@ -14,7 +14,7 @@ Para instalar o aplicativo no admin e, assim, gerenciar suas badges, deve-se ent
 
 ### A Store
 
-Para disponibilizar o componente em sua loja, é necessário adicionar nas "dependencies" do manifest o seguinte código:
+Para disponibilizar o componente em sua loja, é necessário adicionar nas "peerDependencies" do manifest o seguinte código:
 
 ```json
   "vtex.badges": "3.x"
