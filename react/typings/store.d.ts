@@ -22,6 +22,7 @@ interface ProductProps {
   productId: string
   productClusters: ClusterProps[]
   properties: PropertiesProps[]
+  categoryTree: CategoryProps[]
 }
 
 interface ClusterProps {
@@ -32,4 +33,9 @@ interface ClusterProps {
 interface PropertiesProps {
   name: string
   values: string[]
+}
+
+interface CategoryProps {
+  id: string
+  name: string
 }
