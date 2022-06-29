@@ -23,7 +23,7 @@ With this, you should be able to start using the app.
 
 After installing the app you will be able to access it by going to the `OTHER` section of the Admin panel and clicking `Badge Management`.
 
-img 1
+![badges home screen](https://user-images.githubusercontent.com/47991446/176534387-6ce7a70c-3c75-4e19-acf6-3211cfa69555.PNG)
 
 ### Creating badges
 
@@ -37,7 +37,7 @@ The `Add badges` tab allows you to create new badges by following these steps:
 
 See below a badge creation example.
 
-img 2
+![form fill](https://user-images.githubusercontent.com/47991446/176534433-be56d30d-bdf3-4c30-a933-235aba6b1115.PNG)
 
 ### Editing badges
 
@@ -47,7 +47,7 @@ To edit an existing badge, go to the `Edit badges` tab and follow these steps:
 3. Edit the badge attributes.
 4. Click `EDIT`.
 
-img 3
+![edit badges](https://user-images.githubusercontent.com/47991446/176534410-67fac67e-3ae5-40ef-96a0-e8fabb09f2bb.PNG)
 
 ### Deleting badges
 
