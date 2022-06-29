@@ -98,6 +98,8 @@ In order to display the created badges in your store, you must add the `store-ba
 
 ### Component props
 
+These are the props available for customization of the badge component.
+
 | Prop name     | Type     | Description                                                                                                                                                       |
 | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `numberOfBadges` | `number` | Number of badges that will be rendered.                                                                                                                        |
