@@ -107,3 +107,7 @@ These are the props available for customization of the badge component.
 | `numberOfBadges` | `number` | Number of badges that will be rendered.                                                                                                                        |
 | `text`           | `array`  | Defines values that will be used when rendering a badge. To learn more about this prop see [Rich text](https://github.com/vtex-apps/rich-text).    |
 | `image`          | `array`  | Defines values that will be used when rendering image badges. To learn more about these prop see [Store image](https://github.com/vtex-apps/store-image) |
+
+## Final result
+
+After finishing all steps, you can check the result in your store. The order of the badges is set according to the priority defined when creating them. See the example below.
