@@ -39,6 +39,8 @@ See below a badge creation example.
 
 ![form fill](https://user-images.githubusercontent.com/47991446/176534433-be56d30d-bdf3-4c30-a933-235aba6b1115.PNG)
 
+> ⚠️ Note that each badge must contain at least one activation rule condition with the verb `is`. The app will not work properly if all activation rules conditions use `is not`.
+
 ### Editing badges
 
 To edit an existing badge, go to the `Edit badges` tab and follow these steps:
