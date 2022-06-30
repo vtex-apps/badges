@@ -110,4 +110,4 @@ These are the props available for customization of the badge component.
 
 ## Final result
 
-After finishing all steps, you can check the result in your store. The order of the badges is set according to the priority defined when creating them. See the example below.
+After finishing all steps, you can check the result in your store. The order of the badges is set according to the priority defined when creating them. See the image below, that corresponds to the badge setup in this tutorial's examples.
