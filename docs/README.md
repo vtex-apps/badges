@@ -1,6 +1,6 @@
 # O aplicativo Badges
 
-O aplicativo de Badges tem como objetivo adicionar Badges de conteúdo em seu e-commerce. Há uma aplicação no admin em que poderão ser adicionadas, editadas e removidas as badges e há também um componente para frente de loja em que poderão ser acrescentadas as badges cadastradas no tema da sua store.
+O aplicativo de Badges tem como objetivo adicionar Badges de conteúdo em seu ecommerce. Há uma aplicação no admin em que poderão ser adicionadas, editadas e removidas as badges e há também um componente para frente de loja em que poderão ser acrescentadas as badges cadastradas no tema da sua store.
 
 ## Instalando
 
@@ -46,6 +46,8 @@ Um exemplo de como pode-se ser preenchido o formulário que está contido abaixo
 Nesse mesmo gerenciamento pode-se editar ou excluir uma badge em questão, basta-se mudar a aba do formulário de "Adicionar Badge" para "Editar Badges" e ser clicado no botão de "LineActions", como pode-se ser visto na imagem abaixo:
 
 <img width="1440" alt="Captura de Tela 2021-12-03 às 10 22 10" src="https://user-images.githubusercontent.com/80836180/144609583-c6583e99-79d6-4224-b267-07c6c3f54767.png">
+
+Também é importante acrescentar que para o perfeito funcionamento do aplicativo, no campo de regra de ativação deve haver pelo menos uma condição que seja utilizado o verbo "É". Desta forma, não deve haver um badge cuja regra de ativação seja <b>unicamente</b> "NÃO É"
 
 ### Na Store
 
