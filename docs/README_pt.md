@@ -47,6 +47,8 @@ Nesse mesmo gerenciamento pode-se editar ou excluir uma badge em questão, basta
 
 <img width="1440" alt="Captura de Tela 2021-12-03 às 10 22 10" src="https://user-images.githubusercontent.com/80836180/144609583-c6583e99-79d6-4224-b267-07c6c3f54767.png">
 
+Também é importante acrescentar que para o perfeito funcionamento do aplicativo, no campo de regra de ativação deve haver pelo menos uma condição que seja utilizado o verbo "É". Desta forma, não deve haver um badge cuja regra de ativação seja <b>unicamente</b> "NÃO É"
+
 ### Na Store
 
 Agora com as badges cadastradas, é possível adiciona-las em sua loja. Para o correto funcionamento das mesmas é necessário que o componente das badges seja aderida dentro de uma página de produto (store.product) ou dentro de um product-summary. O exemplo abaixo demonstra como colocar uma badges na página de produto.
