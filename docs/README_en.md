@@ -1,4 +1,4 @@
-# Badges
+# Badges app
 
 This app allows you to add content badges to an ecommerce. In the Admin panel, you can create, edit and remove badges. There is also a storefront component that allows these badges to be added to your store theme.
 
