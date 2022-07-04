@@ -1,4 +1,4 @@
-# O aplicativo Badges
+# Badges
 
 O aplicativo de Badges tem como objetivo adicionar Badges de conteúdo em seu ecommerce. Há uma aplicação no admin em que poderão ser adicionadas, editadas e removidas as badges e há também um componente para frente de loja em que poderão ser acrescentadas as badges cadastradas no tema da sua store.
 
