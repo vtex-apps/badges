@@ -12,7 +12,7 @@ In order to setup **Badges** in your store, follow these steps:
 ```
 2. Add **Badges** to the `peerDependencies` in your `manifest.json` file:
 ```json
-"dependencies": {
+"peerDependencies": {
   "vtex.badges": "3.x"
 }
 ```
