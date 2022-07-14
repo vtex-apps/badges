@@ -101,33 +101,26 @@ function conditionsFunction(
   return value
 }
 
-export function getWhere(props: PropsStore) {
-  if (props?.productQuery) {
-    const { product } = props?.productQuery
-    const { selectedItem } = useProduct() ?? {} 
+export function getWhere() {
+  const { selectedItem, product } = useProduct() ?? {}
 
-    if (!selectedItem){
-      return ''
-    }   
-
-    let where =
-      `(simpleStatements.subject=brandId AND simpleStatements.object.id="${product.brandId}") OR ` +
-      `(simpleStatements.subject=categoryId AND simpleStatements.object.id="${product.categoryId}") OR ` +
-      `(simpleStatements.subject=selectedItemId AND simpleStatements.object.id="${selectedItem.itemId}") OR ` +
-      `(simpleStatements.subject=productId AND simpleStatements.object.id="${product.productId}") `
-
-    product.productClusters.forEach((element: { id: string }) => {
-      where += `OR (simpleStatements.subject=productClusters AND simpleStatements.object.id="${element.id}")`
-    })
-
-    product.properties.forEach(
-      (element: { name: string; values: string[] }) => {
-        where += `OR (simpleStatements.subject=specificationProperties AND simpleStatements.object.name="${element.name}" AND simpleStatements.object.value="${element.values[0]}") `
-      }
-    )
-
-    return where
+  if (!selectedItem || !product) {
+    return ''
   }
 
-  return ''
+  let where =
+    `(simpleStatements.subject=brandId AND simpleStatements.object.id="${product.brandId}") OR ` +
+    `(simpleStatements.subject=categoryId AND simpleStatements.object.id="${product.categoryId}") OR ` +
+    `(simpleStatements.subject=selectedItemId AND simpleStatements.object.id="${selectedItem.itemId}") OR ` +
+    `(simpleStatements.subject=productId AND simpleStatements.object.id="${product.productId}") `
+
+  product.productClusters.forEach((element: { id: string }) => {
+    where += `OR (simpleStatements.subject=productClusters AND simpleStatements.object.id="${element.id}")`
+  })
+
+  product.properties.forEach((element: { name: string; values: string[] }) => {
+    where += `OR (simpleStatements.subject=specificationProperties AND simpleStatements.object.name="${element.name}" AND simpleStatements.object.value="${element.values[0]}") `
+  })
+
+  return where
 }

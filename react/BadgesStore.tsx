@@ -11,7 +11,7 @@ const CSS_HANDLES = ['allBadgesContainer', 'badgeContainer', 'badges'] as const
 const BadgesStore: StorefrontFunctionComponent = (props: PropsStore) => {
   const { handles, withModifiers } = useCssHandles(CSS_HANDLES)
 
-  const where = getWhere(props)
+  const where = getWhere()
 
   const pageSize = props.numberOfBadges ? props.numberOfBadges : 1
 
